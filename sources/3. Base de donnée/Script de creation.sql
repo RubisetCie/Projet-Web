@@ -10,9 +10,10 @@ CREATE TABLE users
     user_lastname   			VARCHAR(25) NOT NULL,
     user_nickname  				VARCHAR(25) NOT NULL,
     user_location   			VARCHAR(40) NOT NULL,
+    user_birthday   			DATE NOT NULL,
     user_email      			VARCHAR(25) NOT NULL,
     user_password   			VARCHAR(30) NOT NULL,
-    user_profilepic 			VARCHAR(20) NOT NULL,
+    user_profilepic 			VARCHAR(20),
     user_status     			INT(4) NOT NULL,
 		
 	CONSTRAINT users_pk PRIMARY KEY (user_id)
@@ -26,7 +27,10 @@ CREATE TABLE manifestations
     manifestation_title         VARCHAR(50) NOT NULL,
     manifestation_description	VARCHAR(255) NOT NULL,
     manifestation_picture       VARCHAR(20) NOT NULL,
-    manifestation_date          DATE NOT NULL,
+    manifestation_begin         DATE NOT NULL,
+    manifestation_end			DATE,
+	manifestation_ponctuel		BOOLEAN NOT NULL,
+	manifestation_price			FLOAT(3, 2) NOT NULL,
     manifestation_likes			INT(8) NOT NULL,
     manifestation_publicy		BOOLEAN NOT NULL,
     manifestation_iduser        INT(7) NOT NULL,
