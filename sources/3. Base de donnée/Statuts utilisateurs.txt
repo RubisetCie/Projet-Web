@@ -1,0 +1,4 @@
+Les différents statuts des utilisateurs sont représentés par des entiers caractérisant le niveau de permission :
+	0 : Etudiant
+	1 : Membre du BDE
+	2 : Salariés CESI
