@@ -26,7 +26,7 @@ CREATE TABLE manifestations
     manifestation_id           	INT(7) NOT NULL,
     manifestation_title         VARCHAR(50) NOT NULL,
     manifestation_description	VARCHAR(255) NOT NULL,
-    manifestation_picture       VARCHAR(20) NOT NULL,
+    manifestation_picture       VARCHAR(20),
     manifestation_begin         DATE NOT NULL,
     manifestation_end			DATE,
 	manifestation_ponctuel		BOOLEAN NOT NULL,
@@ -76,6 +76,8 @@ ENGINE = InnoDB;
 CREATE TABLE activites
 (
     activity_name				VARCHAR(30) NOT NULL,
+	activity_description		VARCHAR(255) NOT NULL,
+	activity_picture			VARCHAR(20),
 	
 	CONSTRAINT activites_pk PRIMARY KEY (activity_name)
 )
@@ -85,7 +87,9 @@ ENGINE = InnoDB;
 CREATE TABLE ideas
 (
     idea_id						INT(7) NOT NULL,
-    idea_text					VARCHAR(7) NOT NULL,
+    idea_title					VARCHAR(50) NOT NULL,
+	idea_description			VARCHAR(255) NOT NULL,
+	idea_picture				VARCHAR(20),
     idea_iduser					INT(7) NOT NULL,
 	
 	CONSTRAINT ideas_pk PRIMARY KEY (idea_id),
