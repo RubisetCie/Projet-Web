@@ -1,0 +1,5 @@
+Tokens :
+https://coderwall.com/p/8wrxfw/goodbye-php-sessions-hello-json-web-tokens
+
+JWT (encodage/décodage de tokens) :
+https://jwt.io/
