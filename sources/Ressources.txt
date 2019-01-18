@@ -1,3 +1,6 @@
+Javascript expressions régulières vérification formulaires :
+https://stackoverflow.com/questions/37534411/javascript-input-validation-with-regex
+
 Tokens :
 https://coderwall.com/p/8wrxfw/goodbye-php-sessions-hello-json-web-tokens
 
