@@ -97,6 +97,18 @@ CREATE TABLE ideas
 )
 ENGINE = InnoDB;
 
+# Table reliant les manifestations et les utilisateurs inscrits :
+CREATE TABLE register
+(
+    user_id						INT(7) NOT NULL,
+    manifestation_id			INT(7) NOT NULL,
+	
+	CONSTRAINT register_pk PRIMARY KEY (user_id, manifestation_id),
+	CONSTRAINT register_user_pk FOREIGN KEY (user_id) REFERENCES users(user_id),
+	CONSTRAINT register_manifestation_pk FOREIGN KEY (manifestation_id) REFERENCES manifestations(manifestation_id)
+)
+ENGINE=InnoDB;
+
 # Table reliant les activités pratiquées et les utilisateurs :
 CREATE TABLE practise
 (
