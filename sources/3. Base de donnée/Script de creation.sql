@@ -113,7 +113,7 @@ ENGINE = InnoDB;
 CREATE TABLE products
 (
     product_id					INT(7) NOT NULL,
-    product_name				VARCHAR(25) NOT NULL,
+    product_name				VARCHAR(50) NOT NULL,
     product_description			VARCHAR(255) NOT NULL,
     product_picture				VARCHAR(20) NOT NULL,
     product_type				VARCHAR(25) NOT NULL,
