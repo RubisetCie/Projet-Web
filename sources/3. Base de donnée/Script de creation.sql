@@ -40,7 +40,7 @@ ENGINE = InnoDB;
 CREATE TABLE pictures
 (
     picture_id					INT(7) NOT NULL,
-    picture_title				VARCHAR(20) NOT NULL,
+    picture_title				VARCHAR(50) NOT NULL,
     picture_image				VARCHAR(20) NOT NULL,
     picture_date				DATE NOT NULL,
     picture_likes				INT(8) NOT NULL,
