@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-01-16" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.9" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-01-16" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.9" locale="fr">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Nom" width="167" order="0"/>
@@ -52,14 +52,14 @@
             </task>
             <task id="13" name="CSS" color="#99ff99" meeting="false" start="2019-01-23" duration="7" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="15" name="Modèle" color="#ff0000" meeting="false" start="2019-01-16" duration="14" complete="14" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
+        <task id="15" name="Modèle" color="#ff0000" meeting="false" start="2019-01-16" duration="14" complete="85" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
             <task id="4" name="Dictionnaire de données" color="#ff9999" meeting="false" start="2019-01-16" duration="2" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
                 <depend id="17" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="17" name="MCD" color="#ff9999" meeting="false" start="2019-01-18" duration="5" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
+            <task id="17" name="MCD" color="#ff9999" meeting="false" start="2019-01-18" duration="5" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
                 <depend id="18" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="18" name="MLD et SQL" color="#ff9999" meeting="false" start="2019-01-23" duration="5" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
+            <task id="18" name="MLD et SQL" color="#ff9999" meeting="false" start="2019-01-23" duration="5" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
                 <depend id="19" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="19" name="Remplissage" color="#ff9999" meeting="false" start="2019-01-28" duration="2" complete="0" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
