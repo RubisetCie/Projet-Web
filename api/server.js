@@ -1,4 +1,4 @@
-/* Rôle     : Créé le serveur Node.js
+/* Rôle     : Point d'entrée du serveur Node.js
  * Auteur   : Matthieu CARTERON
  * Date     : 21/01/2019
  */
@@ -11,7 +11,7 @@ var server = http.createServer(function(input, output)
 {
     // On écrit la réponse :
     output.writeHead(200, {"Content-Type" : "text/html"});
-    output.end("<p>Salut tout le monde !</p>", );
+    output.end("<p>Salut tout le monde !</p>");
 });
 
 // On fait écouter le serveur sur le port 8080 :
