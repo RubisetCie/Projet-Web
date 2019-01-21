@@ -1,6 +1,9 @@
 Javascript expressions régulières vérification formulaires :
 https://stackoverflow.com/questions/37534411/javascript-input-validation-with-regex
 
+Upload de fichiers par formulaires :
+https://openclassrooms.com/fr/courses/1085676-upload-de-fichiers-par-formulaire
+
 Tokens :
 https://coderwall.com/p/8wrxfw/goodbye-php-sessions-hello-json-web-tokens
 
