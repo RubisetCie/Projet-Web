@@ -17,12 +17,12 @@
     <link rel="icon" href="static/img/favicon.png" type="image/png">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
-    <script src="./vendors/bootstrap-4.2.1/js/bootstrap.min.js"></script>
+    <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     
     <!-- Balises META -->
     <meta charset="utf-8">
     <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
+    <meta name="keywords" content="CESI,BDE,Boutique,Goodies">
     <meta name="author" content="Mohamed OUMID">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
-    <script src="./vendors/bootstrap-4.2.1/js/bootstrap.min.js"></script>
+    <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     
     <!-- Balises META -->
     <meta charset="utf-8">
