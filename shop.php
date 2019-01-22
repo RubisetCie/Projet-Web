@@ -3,8 +3,6 @@
     <title>Boutique</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     
     <!-- On inclus les deux versions de bootstrap ! -->
     <link rel="stylesheet" href="./vendors/bootstrap-4.2.1/css/bootstrap.min.css">
