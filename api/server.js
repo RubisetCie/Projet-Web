@@ -4,7 +4,7 @@
  * Date     : 21/01/2019
  */
 
-import * from database.js;
+import Database from "database.js";
 
 var http = require("http");
 
@@ -15,6 +15,9 @@ var server = http.createServer(function(input, output)
     output.writeHead(200, {"Content-Type" : "text/html"});
     output.end("<p>Salut tout le monde !</p>");
 });
+
+// On se connecte à la base de donnée :
+Database.connect();
 
 // On fait écouter le serveur sur le port 8080 :
 server.listen(8080);

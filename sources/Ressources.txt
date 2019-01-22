@@ -4,6 +4,9 @@ https://stackoverflow.com/questions/37534411/javascript-input-validation-with-re
 Upload de fichiers par formulaires :
 https://openclassrooms.com/fr/courses/1085676-upload-de-fichiers-par-formulaire
 
+PHP - Cookies et Sessions :
+https://www.julp.fr/articles/17-php-cookies-et-sessions.html
+
 Tokens :
 https://coderwall.com/p/8wrxfw/goodbye-php-sessions-hello-json-web-tokens
 
