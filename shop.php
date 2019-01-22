@@ -37,10 +37,8 @@
 
     <section class="container main-page main-page-pad">
         <div class="shop row">
-
-            <section class="shop-section col-12 col-lg-8">
-
-                <div class="widget widget-primary shop-jumbotron">
+            <section class="col-12 col-lg-8">
+                <div class="shop-section widget widget-primary shop-jumbotron">
                     <h2 class="shop-jumbotron-title">Bienvenue</h2>
                     <h3 class="widget-offset shop-jumbotron-lead">Dans la boutique du BDE</h3>
                     <form class="row shop-search-form">

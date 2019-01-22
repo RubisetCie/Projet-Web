@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="style/css/home.css">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -21,7 +20,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Descritpion de la page">
     <meta name="keywords" content="CESI,BDE">
-    <meta name="author" content="Killian DEROCHE">
+    <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -34,9 +33,6 @@
     </header>
 
     <main>
-        <?php
-            require("./res/content.html");
-        ?>
     </main>
 
     <footer class="container-fluid footer">

@@ -9,11 +9,16 @@
     padding-top : 20px;
 }
 
+.shop-section
+{
+    background-color : orangered;
+}
+
 .shop-jumbotron-title
 {
     font-size : 70px;
     font-weight : lighter;
-    color : #c2242a;
+    color : black;
 }
 
 .shop-jumbotron-lead
