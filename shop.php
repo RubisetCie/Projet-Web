@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
-    <link rel="stylesheet" type="text/css" href="./style/css/foothead.css">
+    <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/shop.css">
     <link rel="icon" href="static/img/favicon.png" type="image/png">
 

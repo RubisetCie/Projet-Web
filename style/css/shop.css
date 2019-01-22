@@ -1,77 +1,94 @@
-.shop {
-    padding-top: 20px;
+/* 
+ * Rôle     : Définit le style de la boutique
+ * Auteur   : Mohamed OUMID
+ * Date     : 22/01/2019
+ */
+
+.shop
+{
+    padding-top : 20px;
 }
 
-    .shop-jumbotron {}
-
-        .shop-jumbotron-title {
-            font-size: 70px;
-            font-weight: lighter;
-            color: #c2242a;
-        }
-
-        .shop-jumbotron-lead {
-            font-size: 20px;
-            padding-left: 10px;
-        }
-
-        .shop-search-form {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-.product {
-    width: 220px;
-    overflow: hidden;
-    padding: 0;
-    margin: 10px;
+.shop-jumbotron-title
+{
+    font-size : 70px;
+    font-weight : lighter;
+    color : #c2242a;
 }
 
-    .product-image {
-        width: 100%;
-        max-height: 220px;
-        overflow: hidden;
-        border-bottom: #0065a7 solid 1px;
-    }
+.shop-jumbotron-lead
+{
+    font-size : 20px;
+    padding-left : 10px;
+}
 
-        .product-image img {
-            width: 100%;
-        }
+.shop-search-form
+{
+    padding-left : 20px;
+    padding-right : 20px;
+}
 
-    .product-desc {
-        padding: 10px 10px 0 10px;
-    }
+.product
+{
+    width : 220px;
+    overflow : hidden;
+    padding : 0;
+    margin : 10px;
+}
 
-        .product-title {
-            font-size: 30px;
-        }
+.product-image
+{
+    width : 100%;
+    max-height : 220px;
+    overflow : hidden;
+    border-bottom : #0065a7 solid 1px;
+}
 
-        .product-price {
-            font-size: 20px;
-        }
+.product-image img
+{
+    width : 100%;
+}
 
-        .product-menu {
-            float: right;
-            text-align: right;
-        }
+.product-desc
+{
+    padding : 10px 10px 0 10px;
+}
 
-.cart{}
+.product-title
+{
+    font-size : 30px;
+}
 
-    .cart-item-list {
-        padding: 0;
-    }
+.product-price
+{
+    font-size : 20px;
+}
 
-    .cart-item {
-        list-style: none;
-    }
+.product-menu
+{
+    float : right;
+    text-align : right;
+}
 
-    .cart-item-right {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        float: right;
-    }
+.cart-item-list
+{
+    padding : 0;
+}
 
-    .cart-item-price {
-        margin-right: 10px;
-    }
+.cart-item
+{
+    list-style : none;
+}
+
+.cart-item-right
+{
+    display : flex;
+    flex-direction : row;
+    justify-content : flex-end;
+    float : right;
+}
+
+.cart-item-price
+{
+    margin-right : 10px;
+}

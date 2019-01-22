@@ -1,0 +1,63 @@
+/* 
+ * Rôle     : Définit le style du footer
+ * Auteur   : Mohamed OUMID
+ * Date     : 22/01/2019
+ */
+
+/**Footer*/
+.footer-infos li
+{
+    list-style-type : none;
+}
+
+.footer-infos li a
+{
+    text-decoration : none;
+    color : inherit;
+}
+.footer-infos li a:focus
+{
+    text-decoration : none;
+    color : inherit;
+}
+.footer-infos li a:active
+{
+    text-decoration : none;
+    color : inherit;
+}
+
+.footer-infos li a:visited
+{
+    text-decoration : none;
+    color : inherit;
+}
+
+.footer-infos ul
+{
+    padding-left : 0;
+}
+
+.footer
+{
+    background-color : #2F4F4F;
+    font-family : "Open sans", sans-serif;
+    font-weight : lighter;
+    padding : 2em;
+    color : #ffffff;
+}
+
+.footer-social
+{
+    text-align : center;
+}
+
+.footer-social-logos
+{
+    font-size : 2em;
+}
+
+.footer-logos
+{
+    text-align : right;
+    margin-top : 1em;
+}
