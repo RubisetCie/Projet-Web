@@ -72,11 +72,9 @@
             </section>
 
             <aside class="widgets col-12 col-lg-4">
-
                 <div class="cart widget">
-
                     <h4 class="widget-title widget-offset">Cart</h4>
-
+                    <!-- Liste du panier -->
                     <ul class="cart-item-list">
                         <li class="cart-item">MyItem 1 <div class="cart-item-right">
                                 <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
@@ -90,14 +88,22 @@
                                 <div class="cart-item-price">8€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
                             </div>
                         </li>
+                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
+                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </li>
+                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
+                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </li>
+                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
+                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                        </li>
                     </ul>
-
                     <button class="button button-primary">Purchase</button>
-
                 </div>
-
             </aside>
-
         </div>
 
     </section>
