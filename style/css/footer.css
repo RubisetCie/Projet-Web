@@ -1,10 +1,9 @@
 /* 
- * Rôle     : Définit le style du footer
+ * Rôle     : Définit le style du pied de page
  * Auteur   : Mohamed OUMID
  * Date     : 22/01/2019
  */
 
-/**Footer*/
 .footer-infos li
 {
     list-style-type : none;
@@ -32,23 +31,26 @@
     color : inherit;
 }
 
-.footer-infos ul
-{
-    padding-left : 0;
-}
-
 .footer
 {
-    background-color : #2F4F4F;
+    background-color : black;
     font-family : "Open sans", sans-serif;
     font-weight : lighter;
-    padding : 2em;
-    color : #ffffff;
+    padding : 0.0002em;
+    color : white;
+}
+
+.footer-logos
+{
+    text-align : right;
+    margin-top : 0.5em;
+    padding-left : 10em;
 }
 
 .footer-social
 {
     text-align : center;
+    margin-top : 3em;
 }
 
 .footer-social-logos
@@ -56,8 +58,33 @@
     font-size : 2em;
 }
 
-.footer-logos
+.twitter, .facebook, .instagram, .snapchat
 {
-    text-align : right;
-    margin-top : 1em;
+    display : inline;
+    margin : 10px;
+    color : orange;
+}
+
+.twitter:hover
+{
+    color : #00acee;
+    margin : 20px;
+}
+
+.facebook:hover
+{
+    color : #3b5998 ;
+    margin : 20px;
+}
+
+.snapchat:hover
+{
+    color : yellow;
+    margin : 20px;
+}
+
+.instagram:hover
+{
+    color : violet;
+    margin : 20px;
 }

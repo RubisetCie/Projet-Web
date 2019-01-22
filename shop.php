@@ -49,6 +49,36 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
+                    
+                    <div id="topvente" class="carousel slide" data-ride="carousel">
+                        <!-- Indicateurs -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#topvente" data-slide-to="0" class="active"></li>
+                            <li data-target="#topvente" data-slide-to="1"></li>
+                            <li data-target="#topvente" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- Les images -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./res/img/2.jpg" alt="Top Vente 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./res/img/4.jpg" alt="Top Vente 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./res/img/6.jpg" alt="Top Vente 3">
+                            </div>
+                        </div>
+
+                        <!-- Les contrôles gauche et droite -->
+                        <a class="carousel-control-prev" href="#topvente" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#topvente" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="product-section row justify-content-center">
@@ -73,29 +103,9 @@
 
             <aside class="widgets col-12 col-lg-4">
                 <div class="cart widget">
-                    <h4 class="widget-title widget-offset">Cart</h4>
+                    <h4 class="widget-title widget-offset">Panier</h4>
                     <!-- Liste du panier -->
                     <ul class="cart-item-list">
-                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
-                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </li>
-                        <li class="cart-item">MyItem 2 <div class="cart-item-right">
-                                <div class="cart-item-price">55€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </li>
-                        <li class="cart-item">MyItem 3 <div class="cart-item-right">
-                                <div class="cart-item-price">8€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </li>
-                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
-                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </li>
-                        <li class="cart-item">MyItem 1 <div class="cart-item-right">
-                                <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                        </li>
                         <li class="cart-item">MyItem 1 <div class="cart-item-right">
                                 <div class="cart-item-price">15€</div><a href="#" class="cart-item-remove"><i class="fa fa-times"></i></a>
                             </div>
