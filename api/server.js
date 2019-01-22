@@ -4,7 +4,7 @@
  * Date     : 21/01/2019
  */
 
-import * from "database.js";
+import * from database.js;
 
 var http = require("http");
 
