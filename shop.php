@@ -9,7 +9,7 @@
     <!-- On inclus les deux versions de bootstrap ! -->
     <link rel="stylesheet" href="./vendors/bootstrap-4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendors/fontawesome-free-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/foothead.css">
@@ -55,11 +55,11 @@
                     <!-- Article statique -->
                     <div class="product widget col-auto">
                         <div class="product-image">
-                            <img src="./img/2.jpg" alt="MyItem 2" />
+                            <img src="./res/img/2.jpg" alt="MyItem 2" />
                         </div>
                         <div class="product-desc">
                             <h4 class="product-title">
-                                MyItem 2 </h4>
+                                MyItem 2</h4>
                             <div class="product-price">
                                 14€
                                 <nav class="product-menu">

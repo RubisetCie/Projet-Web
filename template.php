@@ -8,7 +8,7 @@
     <!-- On inclus les deux versions de bootstrap ! -->
     <link rel="stylesheet" href="./vendors/bootstrap-4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendors/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendors/fontawesome-free-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
