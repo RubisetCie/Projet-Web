@@ -1,0 +1,32 @@
+/* 
+ * Rôle     : Définit le style des pages formulaires
+ * Auteur   : Charafein MOHAMED
+ * Date     : 22/01/2019
+ */
+
+.or
+{
+    color : white;
+}
+
+.input_image
+{
+    padding-left : 140px;
+    padding-bottom :10px;
+}
+
+.modal-content
+{
+    background-color : black;
+}
+
+.div_event
+{
+    padding-left : 300px;
+}
+
+#msg
+{
+   padding-left : 50px; 
+}
+
