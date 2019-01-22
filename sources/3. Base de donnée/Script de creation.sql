@@ -5,14 +5,14 @@
 # Table des utilisateurs :
 CREATE TABLE users
 (
-    user_id						INT(7) NOT NULL,
+    user_id						INT(7) NOT NULL AUTO_INCREMENT,
 	user_firstname				VARCHAR(25) NOT NULL,
     user_lastname   			VARCHAR(25) NOT NULL,
     user_nickname  				VARCHAR(25) NOT NULL,
     user_location   			VARCHAR(40) NOT NULL,
     user_birthday   			DATE NOT NULL,
     user_email      			VARCHAR(25) NOT NULL,
-    user_password   			VARCHAR(30) NOT NULL,
+    user_password   			VARCHAR(32) NOT NULL,
     user_profilepic 			VARCHAR(20),
     user_status     			INT(4) NOT NULL,
 		
@@ -23,7 +23,7 @@ ENGINE = InnoDB;
 # Table des manifestations publiées par les membres du BDE :
 CREATE TABLE manifestations
 (
-    manifestation_id           	INT(7) NOT NULL,
+    manifestation_id           	INT(7) NOT NULL AUTO_INCREMENT,
     manifestation_title         VARCHAR(50) NOT NULL,
     manifestation_description	VARCHAR(255) NOT NULL,
     manifestation_picture       VARCHAR(20),
@@ -43,7 +43,7 @@ ENGINE = InnoDB;
 # Table des photos publiées par les étudiants :
 CREATE TABLE pictures
 (
-    picture_id					INT(7) NOT NULL,
+    picture_id					INT(7) NOT NULL AUTO_INCREMENT,
     picture_title				VARCHAR(50) NOT NULL,
     picture_image				VARCHAR(20) NOT NULL,
     picture_date				DATE NOT NULL,
@@ -59,7 +59,7 @@ ENGINE = InnoDB;
 # Table des commentaires sous les photos :
 CREATE TABLE comments
 (
-    comment_id					INT(7) NOT NULL,
+    comment_id					INT(7) NOT NULL AUTO_INCREMENT,
     comment_text				VARCHAR(255) NOT NULL,
     comment_date				DATE NOT NULL,
     comment_publicy				BOOLEAN NOT NULL,
@@ -86,7 +86,7 @@ ENGINE = InnoDB;
 # Table représentant la boîte à idées :
 CREATE TABLE ideas
 (
-    idea_id						INT(7) NOT NULL,
+    idea_id						INT(7) NOT NULL AUTO_INCREMENT,
     idea_title					VARCHAR(50) NOT NULL,
 	idea_description			VARCHAR(255) NOT NULL,
 	idea_picture				VARCHAR(20),
@@ -124,7 +124,7 @@ ENGINE = InnoDB;
 # Table des produits de la boutique :
 CREATE TABLE products
 (
-    product_id					INT(7) NOT NULL,
+    product_id					INT(7) NOT NULL AUTO_INCREMENT,
     product_name				VARCHAR(50) NOT NULL,
     product_description			VARCHAR(255) NOT NULL,
     product_picture				VARCHAR(20) NOT NULL,

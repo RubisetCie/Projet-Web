@@ -20,6 +20,9 @@ INSERT INTO activites
 # Création de la boîte à idées :
 INSERT INTO ideas
 
+# Création de la table reliant les manifestations et les utilisateurs inscrits :
+INSERT INTO register
+
 # Création de la table reliant les activités pratiquées et les utilisateurs :
 INSERT INTO practise
 
