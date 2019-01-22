@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
 <head>
+    <title>Titre de la page</title>
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
     <!-- On inclus les deux versions de bootstrap ! -->
