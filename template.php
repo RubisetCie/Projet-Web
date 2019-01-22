@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="style/css/home.css">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -33,7 +34,9 @@
     </header>
 
     <main>
-        
+        <?php
+            require("./res/content.html");
+        ?>
     </main>
 
     <footer class="container-fluid footer">
