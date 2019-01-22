@@ -1,3 +1,9 @@
+/* 
+ * Rôle     : Définit le style de la barre de navigation
+ * Auteur   : Killian DEROCHE
+ * Date     : 21/01/2019
+ */
+
 .modal-login
 {
     color : #636363;
@@ -157,15 +163,11 @@
 .signup-form h2:before, .signup-form h2:after
 {
     content : "";
-    
     background : #d4d4d4;
-    
     position : absolute;
     top : 50%;
-    
     height : 2px;
     width : 30%;
-    
     z-index : 2;
 }	
 
