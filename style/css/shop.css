@@ -9,6 +9,13 @@
     padding-top : 20px;
 }
 
+.shop-carousel
+{
+    /* A faire... */
+    border-width : 4px;
+    border-color : black;
+}
+
 .shop-section
 {
     background-color : orangered;
