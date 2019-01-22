@@ -1,4 +1,11 @@
-#titre_associations{ 
-  text-align: center;
-  font-family: Gill Sans MT;
+/* 
+ * Rôle     : Définit le style de la liste des associations
+ * Auteur   : Killian DEROCHE
+ * Date     : 22/01/2019
+ */
+
+#titre_associations
+{ 
+    text-align : center;
+    font-family : Gill Sans MT;
 }
