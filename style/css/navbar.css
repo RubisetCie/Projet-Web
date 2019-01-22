@@ -116,6 +116,11 @@
     padding: 0.5rem 1rem;
 }
 
+.navbar-icon
+{
+    padding-top : 0.2em;
+}
+
 .bde
 {
     display : block;
