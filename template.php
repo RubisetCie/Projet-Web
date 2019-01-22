@@ -16,6 +16,7 @@
     
     <!-- Balises META -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Descritpion de la page">
     <meta name="keywords" content="CESI,BDE">
     <meta name="author" content="Killian DEROCHE">
@@ -34,9 +35,10 @@
 
     </main>
 
-    <footer>
-        <div>
-            <img class="flotte" src="./res/img/logo_cesi.png" alt="Logo Cesi" height="62.8" width="169">
-        </div>
+    <footer class="container-fluid footer">
+        <!-- Pied de page -->
+        <?php
+            require("./res/footer.html");
+        ?>
     </footer>
 </body>
