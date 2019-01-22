@@ -4,7 +4,7 @@
     <title>Titre de la page</title>
     
     <link rel="stylesheet" href="./vendors/bootstrap-4.2.1/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="./vendors/fontawesome-free-5.6.3-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./vendors/fontawesome-free-4.7.0/css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
