@@ -45,7 +45,7 @@
                 </p>
             </article>
             <article>
-                <img class="img-thumbnail img-responsive" src="./res/img/logo_exia.png" alt="Image" width="300" height="150">
+                <img class="img-thumbnail img-responsive" src="./res/img/logo_cesi.png" alt="Image" width="300" height="150">
                 <p class="txt">
                     Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
                 </p>

@@ -6,7 +6,7 @@
 
 .footer-infos
 {
-    padding-top : 2em;
+    padding-top : 1em;
 }
 
 .footer-infos li
@@ -32,7 +32,7 @@
 .footer-logos
 {
     text-align : right;
-    margin-top : 0.5em;
+    padding-top : 2em;
     padding-left : 10em;
 }
 
