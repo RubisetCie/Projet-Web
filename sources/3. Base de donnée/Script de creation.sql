@@ -50,9 +50,11 @@ CREATE TABLE pictures
     picture_likes				INT(8) NOT NULL,
     picture_publicy				BOOLEAN NOT NULL,
     picture_iduser				INT(7) NOT NULL,
+    picture_idmanifestation		INT(7) NOT NULL,
 	
 	CONSTRAINT pictures_pk PRIMARY KEY (picture_id),
-	CONSTRAINT pictures_users_fk FOREIGN KEY (picture_iduser) REFERENCES users(user_id)
+	CONSTRAINT pictures_users_fk FOREIGN KEY (picture_iduser) REFERENCES users(user_id),
+	CONSTRAINT pictures_manifestations_fk FOREIGN KEY (picture_idmanifestation) REFERENCES manifestations(manifestation_id)
 )
 ENGINE = InnoDB;
 
