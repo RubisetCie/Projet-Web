@@ -5,11 +5,11 @@
 # Création des utilisateurs :
 INSERT INTO users
 VALUES
-	(0, "Matthieu", "Carteron", "Rubisetcie", "Nanterre", "03/20/1998", "matthieu.carteron@viacesi.fr", "ba130c9287472791944b4d5059b86052", "matthieu.jpg", 1),
-	(1, "Killian", "Deroche", "Kiki", "Nanterre", "05/06/1999", "killian.deroche@viacesi.fr", "ad2b059d385f56037fda927bd6762d43", "killian.jpg", 1),
-	(2, "Salim", "Zemri", "Salim", "Nanterre", "08/09/1999", "salim.zemri@viacesi.fr", "143c5e946d502265ec529c40114ad27c", "salim.jpg", 2),
-	(3, "Mohamed", "Oumid", "Momo", "Nanterre", "07/09/1998", "mohamed.oumid@viacesi.fr", "7682fe272099ea26efe39c890b33675b", "mohamed.jpg", 1),
-	(4, "Charafein", "Mohamed", "Stan", "Nanterre", "11/25/1999", "charafein.mohamed@viacesi.fr", "d3a8fd6da30995017b9007c91525a4cd", "charafein.jpg", 0);
+	(0, "Matthieu", "Carteron", "Rubisetcie", "Nanterre", '03/20/1998', "matthieu.carteron@viacesi.fr", "ba130c9287472791944b4d5059b86052", "matthieu.jpg", 1),
+	(1, "Killian", "Deroche", "Kiki", "Nanterre", '05/06/1999', "killian.deroche@viacesi.fr", "ad2b059d385f56037fda927bd6762d43", "killian.jpg", 1),
+	(2, "Salim", "Zemri", "Salim", "Nanterre", '08/09/1999', "salim.zemri@viacesi.fr", "143c5e946d502265ec529c40114ad27c", "salim.jpg", 2),
+	(3, "Mohamed", "Oumid", "Momo", "Nanterre", '07/09/1998', "mohamed.oumid@viacesi.fr", "7682fe272099ea26efe39c890b33675b", "mohamed.jpg", 1),
+	(4, "Charafein", "Mohamed", "Stan", "Nanterre", '11/25/1999', "charafein.mohamed@viacesi.fr", "d3a8fd6da30995017b9007c91525a4cd", "charafein.jpg", 0);
 
 # Créations des manifestations publiées par les membres du BDE :
 INSERT INTO manifestations

@@ -11,7 +11,7 @@ CREATE TABLE users
     user_nickname  				VARCHAR(25) NOT NULL,
     user_location   			VARCHAR(40) NOT NULL,
     user_birthday   			DATE NOT NULL,
-    user_email      			VARCHAR(25) NOT NULL,
+    user_email      			VARCHAR(35) NOT NULL,
     user_password   			VARCHAR(32) NOT NULL,
     user_profilepic 			VARCHAR(20),
     user_status     			INT(4) NOT NULL,

@@ -52,7 +52,7 @@
             </task>
             <task id="13" name="CSS" color="#99ff99" meeting="false" start="2019-01-23" duration="7" complete="27" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="15" name="Modèle" color="#ff0000" meeting="false" start="2019-01-16" duration="14" complete="87" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
+        <task id="15" name="Modèle" color="#ff0000" meeting="false" start="2019-01-16" duration="14" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
             <task id="4" name="Dictionnaire de données" color="#ff9999" meeting="false" start="2019-01-16" duration="2" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
                 <depend id="17" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -62,7 +62,7 @@
             <task id="18" name="MLD et SQL" color="#ff9999" meeting="false" start="2019-01-23" duration="5" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true">
                 <depend id="19" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="19" name="Remplissage" color="#ff9999" meeting="false" start="2019-01-28" duration="2" complete="12" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
+            <task id="19" name="Remplissage" color="#ff9999" meeting="false" start="2019-01-28" duration="2" complete="100" thirdDate="2019-01-16" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="20" name="Contrôleur" color="#0033ff" meeting="false" start="2019-01-25" duration="5" complete="0" thirdDate="2019-01-29" thirdDate-constraint="0" expand="true">
             <task id="21" name="Javascript" color="#9999ff" meeting="false" start="2019-01-25" duration="5" complete="0" thirdDate="2019-01-29" thirdDate-constraint="0" expand="true"/>
