@@ -121,6 +121,7 @@
     padding-top : 0.2em;
 }
 
+
 .bde
 {
     display : block;
@@ -129,14 +130,26 @@
     width : auto;
 }
 
+.bg-orange {
+   background-color:  #e67300;
+}
+
+.bg-grey {
+    background-color: #595959;
+}
+
+.bg-color-nav{
+     background-color: #1f1f2e;
+}
+
 .bg-black {
   background-color: black;
 }
 
 .btn-orange {
   color: #fff;
-  background-color:  #e67300;
-  border-color:   #e67300;
+  background-color:  #437bd7;
+  border-color:   #437bd7;
 }
 
 .flotte
