@@ -6,7 +6,7 @@
 
 .footer-infos
 {
-    padding-top : 2em;
+    padding-top : 1em;
 }
 
 .footer-infos li
@@ -26,13 +26,15 @@
     font-family : "Open sans", sans-serif;
     font-weight : lighter;
     padding : 0.0002em;
+    position:absolute;
+    bottom:0px;
     color : black;
 }
 
 .footer-logos
 {
     text-align : right;
-    top : -1em;
+    padding-top : 2em;
     padding-left : 10em;
 }
 
