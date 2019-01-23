@@ -30,7 +30,7 @@ CREATE TABLE manifestations
     manifestation_begin         DATE NOT NULL,
     manifestation_end			DATE,
 	manifestation_ponctuel		BOOLEAN NOT NULL,
-	manifestation_price			FLOAT(3, 2) NOT NULL,
+	manifestation_price			FLOAT(7, 2) NOT NULL,
     manifestation_likes			INT(8) NOT NULL,
     manifestation_publicy		BOOLEAN NOT NULL,
     manifestation_iduser        INT(7) NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE products
     product_description			VARCHAR(255) NOT NULL,
     product_picture				VARCHAR(20) NOT NULL,
     product_type				VARCHAR(25) NOT NULL,
-    product_price				FLOAT(3, 2) NOT NULL,
+    product_price				FLOAT(7, 2) NOT NULL,
     product_stock				INT(4) NOT NULL,
 	
 	CONSTRAINT products_pk PRIMARY KEY (product_id)
