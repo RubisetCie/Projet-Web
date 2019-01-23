@@ -96,14 +96,14 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Confirmer mot de passe :</label>
                             <div class="col-md-8">
-                                <input class="form-control" type="password" >
+                                <input class="form-control" type="password">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <input type="button" class="btn btn-warning" value="confirmer"> 
-                                <input type="reset" class="btn btn-dark" value="annuler">
+                                <input type="button" class="btn btn-warning" value="Confirmer"> 
+                                <input type="reset" class="btn btn-dark" value="Annuler">
                             </div>
                         </div>
                     </form>
