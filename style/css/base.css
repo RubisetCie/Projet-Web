@@ -44,7 +44,7 @@ a:hover
     background-color : white;
     border-radius : 2px;
     box-shadow : 0 3px 5px rgba(0, 0, 0, 0.5);
-    border : #0065a7 solid 1px;
+    border :  skyblue solid 1px;
 }
 
 .widget-primary:hover
@@ -59,24 +59,30 @@ a:hover
 
 .widget-primary
 {
-    border-color : #c2242a;
+    border-color : skyblue;
 }
 
 .section-title
 {
     font-size : 45px;
     font-weight : lighter;
-    color : #0065a7;
+    color :  skyblue;
 }
 
 .button
 {
-    background-color : white;
-    box-shadow : 0 3px 5px rgba(0, 0, 0, 0.5);
-    padding : 5px;
+    background-color : gray;
+    border-width:7px;
+    border-style:double;
+    border-color: gray;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-top:50px;
     border : none;
     outline : none;
     cursor : pointer;
+    
 }
 
 .button-invisible
@@ -88,7 +94,10 @@ a:hover
 .button-primary
 {
     color : white;
-    background-color : #0065a7;
+    border-width:7px;
+    border-style:double;
+    border-color: gray;
+    background-color :  darkblue;
 }
 
 .no-margin-row, .button-row
