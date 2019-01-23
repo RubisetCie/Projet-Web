@@ -1,4 +1,6 @@
 [IMAGES BOUTIQUE]
+	w : 1000px
+	h : 1000px
 
 [IMAGES EVENEMENTS]
 	w : 750px
