@@ -17,16 +17,16 @@
 .footer-infos li a
 {
     text-decoration : none;
-    color : inherit;
+    color : white;
 }
 
 .footer
 {
-    background-color : black;
+    background-color : #1f1f2e;
     font-family : "Open sans", sans-serif;
     font-weight : lighter;
     padding : 0.0002em;
-    color : white;
+    color : black;
 }
 
 .footer-logos
@@ -51,7 +51,7 @@
 {
     display : inline;
     margin : 10px;
-    color : orange;
+    color : #ffffe6;
 }
 
 .twitter:hover
@@ -77,3 +77,4 @@
     color : violet;
     margin : 20px;
 }
+
