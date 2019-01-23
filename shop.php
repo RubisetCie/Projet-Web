@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/shop.css">
-    <link rel="icon" href="static/img/favicon.png" type="image/png">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -36,7 +35,7 @@
     <section class="container main-page main-page-pad">
         <div class="shop row">
             <section class="col-12 col-lg-8">
-                <div class="a">
+                <div class="shop-section">
                     <h2 class="shop-jumbotron-title">Bienvenue</h2>
                     <h3 class="widget-offset shop-jumbotron-lead">Dans la boutique de goodies du BDE !</h3>
                     <form class="row shop-search-form">
@@ -95,7 +94,7 @@
                     <!-- Article statique -->
                     <div class="product widget col-auto">
                         <div class="product-image">
-                            <img src="./res/img/2.jpg" alt="MyItem 2" />
+                            <img src="./res/img/2.jpg" alt="MyItem 2"/>
                         </div>
                         <div class="product-desc">
                             <h4 class="product-title">
@@ -108,183 +107,11 @@
                             </div>
                         </div>
                     </div>
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/3.jpg" alt="MyItem 3" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 3 </h4>
-                            <div class="product-price">
-                                40€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/4.jpg" alt="MyItem 4" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 4 </h4>
-                            <div class="product-price">
-                                10€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/5.jpg" alt="MyItem 5" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 5 </h4>
-                            <div class="product-price">
-                                55€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/6.jpg" alt="MyItem 6" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 6 </h4>
-                            <div class="product-price">
-                                46€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/7.jpg" alt="MyItem 7" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 7 </h4>
-                            <div class="product-price">
-                                44€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/8.jpg" alt="MyItem 8" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 8 </h4>
-                            <div class="product-price">
-                                74€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/9.jpg" alt="MyItem 9" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 9 </h4>
-                            <div class="product-price">
-                                113€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/10.jpg" alt="MyItem 10" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 10 </h4>
-                            <div class="product-price">
-                                107€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/11.jpg" alt="MyItem 11" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 11 </h4>
-                            <div class="product-price">
-                                76€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./img/12.jpg" alt="MyItem 12" />
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 12 </h4>
-                            <div class="product-price">
-                                115€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-3x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </section>
 
-            <aside >
-                <div class="button">
-                    <br/>
-                    <br/>
-                    <button class="button button-primary" style="width:250px" >Passer la commande</button>
-                </div>
+            <aside>
+                <button class="button button-primary" style="width:250px;height:150px">Passer commande</button>
             </aside>
         </div>
 

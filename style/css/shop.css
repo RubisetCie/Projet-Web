@@ -1,7 +1,7 @@
 /* 
  * Rôle     : Définit le style de la boutique
  * Auteur   : Mohamed OUMID
- * Date     : 22/01/2019
+ * Date     : 23/01/2019
  */
 
 .shop
@@ -9,19 +9,18 @@
     padding-top : 20px;
 }
 
-.item
+/*.item
 {
-    /* A faire... */
     border-width : 5px;
-    border-style: double;
+    border-style : double;
     border-color : gray;
-}
+}*/
 
 .shop-section
 {
-    border-width:7px;
-    border-style:double;
-    border-color: gray;
+    border-width : 7px;
+    border-style : double;
+    border-color : gray;
     background-color : skyblue;
 }
 
@@ -107,9 +106,4 @@
 .cart-item-price
 {
     margin-right : 10px;
-}
-
-.button {
-    
-     width: 100px;
 }
