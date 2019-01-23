@@ -2,7 +2,7 @@
 <!-- Informations d'en-tête -->
 
 <head>
-    <title>Titre de la page</title>
+    <title>Boîte à idées</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -21,8 +21,8 @@
     <!-- Balises META -->
     <meta charset="utf-8">
     <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
-    <meta name="author" content="Matthieu CARTERON">
+    <meta name="keywords" content="CESI,BDE,Boîte,Propositions,Idée,Idées,Club">
+    <meta name="author" content="Salim ZEMRI">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -35,60 +35,19 @@
     </header>
 
     <main>
-
         <section>
-
+            <!-- Idées statique -->
             <p class="idea">
                 Dum haec in oriente aguntur, Arelate hiemem agens Constantius post theatralis ludos atque circenses ambitioso editos apparatu diem sextum idus Octobres, qui imperii eius annum tricensimum terminabat, insolentiae pondera gravius librans, siquid dubium deferebatur aut falsum, pro liquido accipiens et conperto, inter alia excarnificatum Gerontium Magnentianae comitem partis exulari maerore multavit.
             </p>
-
-
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-            <p class="idea">
-                Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
-            </p>
-
-            
-
-
         </section>
 
+        <!-- Meilleures idées -->
         <aside>
-
-            <img src="https://risibank.fr/cache/stickers/d1076/107688-full.gif">
-
+            <img class="img-idea" src="https://risibank.fr/cache/stickers/d1076/107688-full.gif">
             <p class="ideatop">Dum haec in oriente aguntur.</p>
-
         </aside>
-
     </main>
-    
 
     <footer class="container-fluid footer">
         <!-- Pied de page -->
