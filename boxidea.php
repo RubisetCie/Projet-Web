@@ -73,7 +73,39 @@
             <p class="idea">
                 Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.
             </p>
+            
+            <button type="button" id="testBtn" class="btn btn-success glyphicon glyphicon-thumbs-up" data-loading-text=" ...">
+                0
+            </button>
+            <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ...">
+                0
+            </button>
 
+            <script>
+                $('#testBtn').click(function() {
+                    var cnt = 0;
+                    var btn = $(this);
+                    btn.button('loading');
+                    setTimeout(function() {
+                        cnt++;
+                        btn.button('reset');
+                        btn.text('  ' + cnt);
+                    }, 1000);
+                });
+
+                $('#testBtnDown').click(function() {
+                    var cnt = 0;
+                    var btn = $(this);
+                    btn.button('loading');
+                    setTimeout(function() {
+                        if (cnt > -10) {
+                            cnt--;
+                        }
+                        btn.button('reset');
+                        btn.text('  ' + cnt);
+                    }, 1000);
+                });
+            </script>
             
 
 
