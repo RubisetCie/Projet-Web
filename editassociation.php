@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Nouvel événement</title>
+    <title>Edition d'une association</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -20,7 +20,6 @@
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Permet d'ajouter un nouvel événement">
     <meta name="author" content="Killian DEROCHE">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -37,11 +36,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content bg-color">
                 <div class="modal-header">
-                    <h5 class="or">Editer une Association</h5>
+                    <h5 class="or">Editer une association</h5>
                 </div>
                 
                 <div class="form-group">
-                    <label for="Tire_assoc" class="col-xs-2 control-label">Titre:</label>
+                    <label for="Tire_assoc" class="col-xs-2 control-label">Titre :</label>
                         <div class="col-xs-9">
                         <input type="text" class="form-control" id="Titre_assoc" name="Tire_assoc" placeholder="Ecrire le titre">
                         </div>
@@ -49,12 +48,12 @@
 
                 <div class="container">
                     <div class="row">
-                         <label for="Image" class="col-xs-1 control-label">Image:</label>
+                         <label for="Image" class="col-xs-1 control-label">Image :</label>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn btn-orange">
-                                        Browse&hellip; <input type="file" id="Image"style="display: none;" multiple >
+                                        Parcourir&hellip; <input type="file" id="Image"style="display : none;" multiple >
                                     </span>
                                 </label>
                                 <input type="text" class="form-control" readonly>
@@ -64,13 +63,13 @@
                 </div>
 
                 <div class="form-group green-border-focus">
-                  <label for="Description" class="col-xs-1 control-label">Description:</label>
-                  <textarea class="form-control" id="Description" rows="2">Ecrivez la description de l'association</textarea>
+                    <label for="Description" class="col-xs-1 control-label">Description :</label>
+                    <textarea class="form-control" id="Description" rows="2">Ecrivez la description de l'association.</textarea>
                 </div>
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Soumettre</button>
+                    <button type="button" class="btn btn-success">Valider</button>
                 </div>
             </div>
         </div>

@@ -37,7 +37,7 @@
         <h2>Bienvenue sur le site officiel du BDE !</h2>
         <section>
             <article>
-            <img class="top img-thumbnail img-responsive" src="./res/img/party.jpg" alt="Party">
+            <img class="top img-home img-thumbnail img-responsive" src="./res/img/party.jpg" alt="Party">
                 <p class="txt">
                     Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
                     Ideoque fertur neminem aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt. et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte.
@@ -45,7 +45,7 @@
                 </p>
             </article>
             <article>
-                <img class="img-thumbnail img-responsive" src="./res/img/logo_cesi.png" alt="Image" width="300" height="150">
+                <img class="img-thumbnail img-home img-responsive" src="./res/img/logo_cesi.png" alt="Image" width="300" height="150">
                 <p class="txt">
                     Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
                 </p>
@@ -54,9 +54,9 @@
         </section>
 
         <aside>
-            <img class="img-thumbnail img-responsive" src="./res/img/2.jpg" alt="Party">
+            <img class="img-thumbnail img-home img-responsive" src="./res/img/2.jpg" alt="Party">
                 <p class="a">Isdem diebus Apollinaris Domitiani gener.</p>
-            <img class="img-thumbnail img-responsive" src="./res/img/4.jpg" alt="Party">
+            <img class="img-thumbnail img-home img-responsive" src="./res/img/4.jpg" alt="Party">
                 <p class="a">Isdem diebus Apollinaris Domitiani gener.</p>
         </aside>
     </main>
