@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
 <head>
-    <title>Titre de la page</title>
+    <title>Edition d'un produit</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -18,8 +18,6 @@
     
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
     <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,18 +32,18 @@
 
     <main>
         <div class="container">
-    <h1>Edition du Produit</h1>
-  	<hr>
-	<div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
-        <div class="text-center">
-          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"><!-- le src de cette photo se trouve directement sur internet-->
-          <h6>télécharger une photo...</h6>
-          
-          <input type="file" class="form-control">
-        </div>
-      </div>
+            <h1>Edition du Produit</h1>
+            <hr>
+            <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+              <div class="text-center">
+                <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"><!-- le src de cette photo se trouve directement sur internet-->
+                <h6>télécharger une photo...</h6>
+
+                <input type="file" class="form-control">
+              </div>
+            </div>
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">

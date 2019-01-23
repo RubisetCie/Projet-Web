@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
-
 <head>
-    <title>Boite à idées - BDE Cesi</title>
+    <title>Mentions légales</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -13,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="./style/css/ideabox.css">
     <link rel="stylesheet" type="text/css" href="./style/css/legalmentions.css">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
@@ -21,8 +19,8 @@
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
+    <meta name="description" content="Conditions d'utilisations du site">
+    <meta name="keywords" content="CESI,BDE,Conditions,Utilisation,Mentions,Legales">
     <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -36,7 +34,6 @@
     </header>
 
     <main>
-
         <p>
             Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.<br>
 
@@ -68,10 +65,7 @@
 
             Cuius acerbitati uxor grave accesserat incentivum, germanitate Augusti turgida supra modum, quam Hannibaliano regi fratris filio antehac Constantinus iunxerat pater, Megaera quaedam mortalis, inflammatrix saevientis adsidua, humani cruoris avida nihil mitius quam maritus; qui paulatim eruditiores facti processu temporis ad nocendum per clandestinos versutosque rumigerulos conpertis leviter addere quaedam male suetos falsa et placentia sibi discentes, adfectati regni vel artium nefandarum calumnias insontibus adfligebant.<br>
         </p>
-
-
     </main>
-
 
     <footer class="container-fluid footer">
         <!-- Pied de page -->
