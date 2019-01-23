@@ -1,9 +1,14 @@
-/* 
+﻿/* 
  * Rôle     : Définit le style de l'édition d'événement
  * Auteur   : Killian DEROCHE
  * Date     : 23/01/2019
  */
 
+.or{
+    font-family: "Gill Sans MT", Gill, SERIF;
+    font-size: 20px;
+    color:white;
+}
 .btn-file
 {
     position : relative;
