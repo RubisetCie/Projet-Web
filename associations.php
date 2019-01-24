@@ -36,14 +36,13 @@
         <h1 id="titre_associations"> Liste des Associations</h1></br>  
         <div class="container">
             <div class="row">
-                <!-- Association statique -->
                 <?php
                     try
                     {
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                         // On récupère les données :

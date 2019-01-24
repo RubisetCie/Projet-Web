@@ -91,22 +91,51 @@
                 </div>
 
                 <div class="product-section row justify-content-center">
+                    <?php
+                        try
+                        {
+                            // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                            if (!isset($GLOBALS["pdo"]))
+                            {
+                                $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            }
+
+                            // On récupère les données :
+                            $res = $GLOBALS["pdo"]->query("SELECT product_name, product_picture, product_price, product_stock FROM products");
+
+                            // On affiche les activités :
+                            $table = $res->fetch(PDO::FETCH_ASSOC);
+
+                            while ($table)
+                            {
+                                // On vérifie si le produit est en stock (sinon on ne l'affiche pas) :
+                                if ($table["product_stock"] > 0)
+                                {
+                                    echo "<div class='product widget col-auto'>
+                                            <div class='product-image'>
+                                                <img src='./res/img/products/" . $table["product_picture"] . "' alt='" . $table["product_name"] . "'/>
+                                            </div>
+                                            <div class='product-desc'>
+                                                <h4 class='product-title'>" . $table["product_name"] . "</h4>
+                                                <div class='product-price'>" . $table["product_price"] . " €
+                                                    <nav class='product-menu'>
+                                                        <a href='#'><i class='fa fa-cart-plus fa-2x'></i></a>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                          </div>";
+                                }
+                                
+                                $table = $res->fetch(PDO::FETCH_ASSOC);
+                            }
+                        }
+                        catch (PDOException $e)
+                        {
+                            echo $e->getMessage();
+                        }
+                    ?>
                     <!-- Article statique -->
-                    <div class="product widget col-auto">
-                        <div class="product-image">
-                            <img src="./res/img/2.jpg" alt="MyItem 2"/>
-                        </div>
-                        <div class="product-desc">
-                            <h4 class="product-title">
-                                MyItem 2</h4>
-                            <div class="product-price">
-                                14€
-                                <nav class="product-menu">
-                                    <a href="#"><i class="fa fa-cart-plus fa-2x"></i></a>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
 
