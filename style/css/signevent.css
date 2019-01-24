@@ -1,34 +1,46 @@
-main {
-    margin-left: 30px;
-    margin-right: 30px;
+/* 
+ * Rôle     : Définit le style de l'inscription à un événement
+ * Auteur   : Charafein MOHAMED
+ * Date     : 24/01/2019
+ */
+
+main
+{
+    margin-left : 30px;
+    margin-right : 30px;
 }
 
-h1 {
-    font-family: "Gill Sans MT";
-    font-size: 75px;
-    text-align: center;
+.signevent-h1
+{
+    font-family : "Gill Sans MT";
+    font-size : 75px;
+    text-align : center;
 }
 
-img {
-    display: block;
+.signevent-img
+{
+    display : block;
 }
 
-p {
-    text-align: justify;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.signevent-p
+{
+    text-align : justify;
+    padding-top : 30px;
+    padding-bottom : 30px;
 }
 
-.bt {
-    position: relative;
-    border-right: 500px;
-    bottom: 0px;
-    padding-bottom: 50px;
+.bt
+{
+    position : relative;
+    border-right : 500px;
+    bottom : 0px;
+    padding-bottom : 50px;
 }
 
-button {
-    font-family: "Gill Sans MT";
-    font-size: 50px;
-    width: 150px;
-    height: 60px;
+.signevent-button
+{
+    font-family : "Gill Sans MT";
+    font-size : 50px;
+    width : 150px;
+    height : 60px;
 }

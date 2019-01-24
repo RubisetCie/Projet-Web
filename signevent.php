@@ -2,7 +2,7 @@
 <!-- Informations d'en-tête -->
 
 <head>
-    <title>Titre de la page</title>
+    <title>Inscription à un événement</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -20,9 +20,7 @@
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
-    <meta name="author" content="Matthieu CARTERON">
+    <meta name="author" content="Charafein MOHAMED">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -35,20 +33,17 @@
     </header>
 
     <main>
+        <h1 class="signevent-h1">Inscription à un evenement</h1>
+        <img class="img-responsive signevent-img center-block" src="https://www.investirgabon.com/wp-content/uploads/2018/08/sport.png" alt="Evenement">
 
-        <h1>Inscription à un evenement</h1>
-
-        <img class="img-responsive img-thumbnail center-block" src="https://www.investirgabon.com/wp-content/uploads/2018/08/sport.png" alt="Evenement">
-
-        <p>
+        <p class="signevent-p">
             Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est. Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est. Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.
         </p>
 
         <div class="bt">
-            <button type="button" class="btn btn-dark btn-lg">Réservez</button>
-            <button type="submit" class="btn btn-dark btn-lg">Prix: 15€</button>
+            <button class="signevent-button" type="button" class="btn btn-dark btn-lg">S'inscrire</button>
+            <button class="signevent-button" type="submit" class="btn btn-dark btn-lg">Prix : 15€</button>
         </div>
-
     </main>
 
     <footer class="container-fluid footer">
