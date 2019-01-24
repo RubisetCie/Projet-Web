@@ -46,37 +46,81 @@
                     </form>
                     
                     <div id="topvente" class="shop-carousel carousel slide" data-ride="carousel">
-                        <!-- Indicateurs -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#topvente" data-slide-to="0" class="active"></li>
-                            <li data-target="#topvente" data-slide-to="1"></li>
-                            <li data-target="#topvente" data-slide-to="2"></li>
-                        </ul>
+                        
 
                         <!-- Les images -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="./res/img/2.jpg" align="center" alt="Top Vente 1">
-                                <div class="carousel-caption">
-                                    <h3>Article 1</h3>
-                                    <p>Description</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="./res/img/4.jpg" align="center" alt="Top Vente 2">
-                                <div class="carousel-caption">
-                                    <h3>Article 1</h3>
-                                    <p>Description</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="./res/img/6.jpg" align="center" alt="Top Vente 3">
-                                <div class="carousel-caption">
-                                    <h3>Article 1</h3>
-                                    <p>Description</p>
-                                </div>
-                            </div>
-                        </div>
+                        
+                            <?php
+                                try
+                                {
+                                    // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                                    if (!isset($GLOBALS["pdo"]))
+                                    {
+                                        $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                                    }
+
+                                    // On récupère les données des meilleures ventes (stock le plus bas) :
+                                    $ress = $GLOBALS["pdo"]->query("SELECT product_name, product_description, product_picture, product_stock FROM products ORDER BY product_stock ASC LIMIT 4");
+
+                                    // On récupère les produits :
+                                    $tables = $ress->fetch(PDO::FETCH_ASSOC);
+                                    $first = TRUE;
+                                    
+                                    // Les indicateurs du carrousel :
+                                    echo "<ul class='carousel-indicators'>";
+                                    
+                                    for ($i = 0; $i < $ress->rowCount(); $i++)
+                                    {
+                                        if ($i == 0)
+                                        {
+                                            echo "<li data-target='#topvente' data-slide-to='0' class='active'></li>";
+                                        }
+                                        else
+                                        {
+                                            echo "<li data-target='#topvente' data-slide-to='$i'></li>";
+                                        }
+                                    }
+
+                                    echo "</ul>";
+
+                                    // Les images du carrousel :
+                                    echo "<div class='carousel-inner'>";
+                                    
+                                    while ($tables)
+                                    {
+                                        if ($first)
+                                        {
+                                            echo "<div class='item active'>
+                                                    <img src='./res/img/products/" . $tables["product_picture"] . "' align='center' alt='" . $tables["product_name"] . "'>
+                                                    <div class='carousel-caption'>
+                                                        <h3>" . $tables["product_name"] . "</h3>
+                                                        <p>" . $tables["product_description"] . "</p>
+                                                    </div>
+                                                  </div>";
+                                        }
+                                        else
+                                        {
+                                            echo "<div class='item'>
+                                                    <img src='./res/img/products/" . $tables["product_picture"] . "' align='center' alt='" . $tables["product_name"] . "'>
+                                                    <div class='carousel-caption'>
+                                                        <h3>" . $tables["product_name"] . "</h3>
+                                                        <p>" . $tables["product_description"] . "</p>
+                                                    </div>
+                                                  </div>";
+                                        }
+
+                                        $tables = $ress->fetch(PDO::FETCH_ASSOC);
+                                        $first = FALSE;
+                                    }
+                                    
+                                    echo "</div>";
+                                }
+                                catch (PDOException $e)
+                                {
+                                    echo $e->getMessage();
+                                }
+                            ?>
+                        
 
                         <!-- Les contrôles gauche et droite -->
                         <a class="left carousel-control" href="#topvente" data-slide="prev">
@@ -103,7 +147,7 @@
                             // On récupère les données :
                             $res = $GLOBALS["pdo"]->query("SELECT product_name, product_picture, product_price, product_stock FROM products");
 
-                            // On affiche les activités :
+                            // On affiche les produits :
                             $table = $res->fetch(PDO::FETCH_ASSOC);
 
                             while ($table)
@@ -134,8 +178,6 @@
                             echo $e->getMessage();
                         }
                     ?>
-                    <!-- Article statique -->
-                    
                 </div>
             </section>
 
