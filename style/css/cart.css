@@ -1,12 +1,8 @@
-
-
-/*
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-/* Reset */
+﻿/* 
+ * Rôle     : Définit le style de l'édition d'événement
+ * Auteur   : Mohamed OUMID
+ * Date     : 24/01/2019
+ */
 
 .float {
     position: fixed;
@@ -299,7 +295,7 @@ header.major:after {
     content: '';
     display: inline-block;
     height: 0.2em;
-    max-width: 20em
+    max-width: 20em;
     width: 75%;
 }
 
@@ -568,4 +564,5 @@ input[type="button"]:disabled,
     input[type="button"],
     .button {
         padding: 0;
-
+    }
+}
