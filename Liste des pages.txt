@@ -4,7 +4,7 @@
 - X	|	Liste des associations (associations.php)
 - k |		Descritpion associations (association.php)
 - k |		Description d'événement (event.php)
-- S |		Inscription à un événement (signevent.php)
+- X |		Inscription à un événement (signevent.php)
 - X	|		Edition d'association (editassociation.php)
 -(k)|		Edition d'événement (editevent.php)
 - X |		Ajout d'idée dans la boîte à idées (ideas.php)
