@@ -2,7 +2,7 @@
 <!-- Informations d'en-tête -->
 
 <head>
-    <title>Titre de la page</title>
+    <title>Proposition d'activité</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -20,9 +20,7 @@
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
-    <meta name="author" content="Matthieu CARTERON">
+    <meta name="author" content="Charafein MOHAMED">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -35,29 +33,22 @@
     </header>
 
     <main>
-
-
-
-
-
-
         <div class="modal-dialog modal-ideas">
             <div class="modal-content modal-idea bg-color">
                 <div class="modal-header">
-                    <h4 class="modal-title">éditer une idée </h4>
+                    <h4 class="modal-title">Proposer une idée</h4>
                 </div>
                 <div class="modal-body">
                     <form action="/examples/actions/confirmation.php" method="post">
-
                         <div class="form-group form-idea" >
-                            <label class="col-md-3 control-label">titre de l'idée :</label>
+                            <label class="col-md-3 control-label">Titre de l'idée :</label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group form-idea" >
-                            <label class="col-md-3 control-label">inserer une image:</label>
+                            <label class="col-md-3 control-label">Inserer une image :</label>
                             <div class="col-md-8">
                                 <span class="btn btn-default btn-file">
                                     Browse <input type="file">
@@ -66,24 +57,19 @@
                         </div>
 
                         <div class="form-group form-idea">
-                            <label class="col-md-3 control-label">description de l'idée :</label>
+                            <label class="col-md-3 control-label">Description de l'idée :</label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" class="btn btn-success btn-block btn-lg" value="soumettre">
+                            <input type="submit" class="btn btn-success btn-block btn-lg" value="Soumettre">
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                </div>
             </div>
         </div>
-
-
-
     </main>
 
     <footer class="container-fluid footer">
