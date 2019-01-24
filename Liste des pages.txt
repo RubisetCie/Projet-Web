@@ -7,7 +7,7 @@
 - S |		Inscription à un événement (signevent.php)
 - X	|		Edition d'association (editassociation.php)
 -(k)|		Edition d'événement (editevent.php)
-- C |		Ajout d'idée dans la boîte à idées (ideas.php)
+- X |		Ajout d'idée dans la boîte à idées (ideas.php)
 - C |		Liste des personnes inscriptes à un événement (signed.php)
 - S |		Liste de toutes les photos postées (quel que soit l'événement) (pictures.php)
 - X	|	Boutique (shop.php)
