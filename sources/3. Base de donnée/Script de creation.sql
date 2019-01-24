@@ -75,13 +75,13 @@ CREATE TABLE comments
 ENGINE = InnoDB;
 
 # Table contenant la liste de toutes les activités :
-CREATE TABLE activites
+CREATE TABLE activities
 (
     activity_name				VARCHAR(30) NOT NULL,
 	activity_description		VARCHAR(255) NOT NULL,
 	activity_picture			VARCHAR(20),
 	
-	CONSTRAINT activites_pk PRIMARY KEY (activity_name)
+	CONSTRAINT activities_pk PRIMARY KEY (activity_name)
 )
 ENGINE = InnoDB;
 
@@ -118,7 +118,7 @@ CREATE TABLE practise
     user_id						INT(7) NOT NULL,
 	
 	CONSTRAINT practise_pk PRIMARY KEY (activity_name, user_id),
-	CONSTRAINT practise_activities_fk FOREIGN KEY (activity_name) REFERENCES activites(activity_name),
+	CONSTRAINT practise_activities_fk FOREIGN KEY (activity_name) REFERENCES activities(activity_name),
 	CONSTRAINT practise_users_fk FOREIGN KEY (user_id) REFERENCES users(user_id)
 )
 ENGINE = InnoDB;

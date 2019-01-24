@@ -37,16 +37,43 @@
         <div class="container">
             <div class="row">
                 <!-- Association statique -->
-                <div class="col-md-4">
-                    <div class="card bg-light">
-                        <img class="card-img-top" src="./res/img/oenologie.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title border-bottom pb-3">Cesi'Oenologie</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-sm btn-info float-right">Lire plus</a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    try
+                    {
+                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                        if (!isset($GLOBALS["pdo"]))
+                        {
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                        }
+
+                        // On récupère les données :
+                        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities ORDER BY activity_name");
+
+                        // On affiche les activités :
+                        $table = $res->fetch(PDO::FETCH_ASSOC);
+                        
+                        while ($table)
+                        {
+                            echo "<div class='col-md-4'>
+                                    <div class='card bg-light'>
+                                        <img class='card-img-top' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . ">
+                                        <div class='card-body'>
+                                            <h5 class='card-title border-bottom pb-3'>" . $table["activity_name"] . "</h5>
+                                            <p class='card-text'>" . $table["activity_description"] . "</p>
+                                            <a href='#' class='btn btn-sm btn-info float-right'>Lire plus</a>
+                                        </div>
+                                    </div>
+                                 </div>";
+                            
+                            $table = $res->fetch(PDO::FETCH_ASSOC);
+                        }
+                    }
+                    catch (PDOException $e)
+                    {
+                        echo $e->getMessage();
+                    }
+                ?>
+                
             </div>
         </div>
     </main>

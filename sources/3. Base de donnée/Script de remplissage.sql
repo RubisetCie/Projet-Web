@@ -40,7 +40,7 @@ VALUES
 	(7, "Trop fort !", STR_TO_DATE("08-08-2018", "%d-%m-%Y"), 1, 3, 4);
 
 # Créations de la liste de toutes les activités :
-INSERT INTO activites
+INSERT INTO activities
 VALUES
 	("Voile", "Rejoignez-nous à la plage pour faire de la voile entre futur ingénieurs !", "club_voile.jpg"),
 	("Gaming", "Participez à des compétitions de jeux-vidéos en ligne avec les étudiants !", "club_gaming.jpg"),
