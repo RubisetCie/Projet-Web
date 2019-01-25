@@ -53,7 +53,7 @@
             {
                 case 0 :
                     echo "<div class='text-center'>
-                            <button type='submit' class='btn btn-orange' action='./php/deconnection.php' method='get'>Déconnexion</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>
                           </div>";
                     break;
                 case 1 :
