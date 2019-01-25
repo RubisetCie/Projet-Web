@@ -27,7 +27,7 @@
         
         if ($test->rowCount() == 0)
         {
-            header("Location: ./index.php");
+            header("Location: ../index.php");
             exit;
         }
         
@@ -42,5 +42,5 @@
         echo $e->getMessage();
     }
     
-    header("Location: ./index.php");
+    header("Location: ../index.php");
 ?>

@@ -37,7 +37,7 @@
         session_start();
     
         // On vérifie si une session est en cours :
-        if (!isset($_SESSION["status"]))
+        if (isset($_SESSION["id"]) == 0)
         {
             echo "<div class='text-center modal-box'>
                     <button type='button' class='btn btn-orange' data-toggle='modal' data-target='#Modal1'>Se connecter</button>
@@ -57,22 +57,22 @@
                           </div>";
                     break;
                 case 1 :
-                    echo "<div class='text-center'>
+                    echo "<div class='text-center modal-box'>
                             <button type='button' class='btn btn-orange' data-toggle='modal'>Nouvel événement</button>
                           </div>
-                          <div class='text-center'>
+                          <div class='text-center modal-box'>
                             <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des inscrits</button>
                           </div>
                           <div class='text-center'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal' action='./php/deconnection.php' method='get'>Déconnexion</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>
                           </div>";
                     break;
                 case 2 :
-                    echo "<div class='text-center'>
+                    echo "<div class='text-center modal-box'>
                             <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des photos</button>
                           </div>
                           <div class='text-center'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal' action='./php/deconnection.php' method='get'>Déconnexion</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>
                           </div>";
                     break;
             }

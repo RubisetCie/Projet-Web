@@ -6,9 +6,8 @@
 
 <?php
     // On détruit la session :
+    session_start();
     session_destroy();
-    
-    unset($_SESSION["status"]);
     
     header("Location: ../index.php");
 ?>
