@@ -12,12 +12,9 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/shop.css">
-    <link rel="shortcut icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script src="./js/inscription.js"></script>
-    <script src="./js/connection.js"></script>
     
     <!-- Balises META -->
     <meta charset="utf-8">
@@ -31,7 +28,7 @@
     <header>
         <!-- Barre de navigation -->
         <?php
-            require("./res/header.php");
+            require("./res/header.html");
         ?>
     </header>
 
@@ -174,7 +171,9 @@
             </section>
 
             <aside>
-                <button class="button button-primary" style="width:250px;height:150px">Passer commande</button>
+                
+                <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#Modal2" style="width:200px ; height: 100px" >passer la commande</button>
+                
             </aside>
         </div>
 
