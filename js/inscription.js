@@ -53,7 +53,7 @@ function validateInscription()
         return false;
     
     // On teste si l'adresse mail entrée est valide avec une expression régulière :
-    var emailregex = new RegExp("@[a-z].[a-z]$");
+    var emailregex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     if(!emailregex.test(email))
     {
