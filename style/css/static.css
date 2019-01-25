@@ -1,17 +1,20 @@
-#titre-association{
+#titre-association
+{
 	font-family: Gill Sans MT, Gill, SERIF;
 	color : black;
 	text-align: center; 
 }
 
-.img-assoc{
+.img-assoc
+{
 	display:block;
 	width:auto;
 	margin-left:auto;
 	margin-right:auto;
 }
 
-p {
+p
+{
   width: 700px;
   margin: auto;
   font-size: 1.2em;  

@@ -52,7 +52,7 @@
                     
                     $table = $query->fetch();
                     
-                    echo "<h1 class='titre-association'>" . $table["activity_name"] . "</h1>
+                    echo "<h1 id='titre-association'>" . $table["activity_name"] . "</h1>
                           <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt='" . $table["activity_name"] . "'>
                           <p>" . $table["activity_description"] . "</p>";
                 }

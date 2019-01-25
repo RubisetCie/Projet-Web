@@ -53,7 +53,7 @@
             {
                 case 0 :
                     echo "<div class='text-center'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                            <button type='submit' class='btn btn-orange' action='./php/deconnection.php' method='get'>Déconnexion</button>
                           </div>";
                     break;
                 case 1 :
@@ -64,7 +64,7 @@
                             <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des inscrits</button>
                           </div>
                           <div class='text-center'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                            <button type='button' class='btn btn-orange' data-toggle='modal' action='./php/deconnection.php' method='get'>Déconnexion</button>
                           </div>";
                     break;
                 case 2 :
@@ -72,7 +72,7 @@
                             <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des photos</button>
                           </div>
                           <div class='text-center'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                            <button type='button' class='btn btn-orange' data-toggle='modal' action='./php/deconnection.php' method='get'>Déconnexion</button>
                           </div>";
                     break;
             }
