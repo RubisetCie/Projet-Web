@@ -1,10 +1,10 @@
 /* 
- * Rôle     : Permet de valider les formulaires d'inscription avec une expression régulière
+ * Rôle     : Permet de valider les formulaires d'inscription
  * Auteur   : Matthieu CARTERON
  * Date     : 25/01/2019
  */
 
-function validate()
+function validateInscription()
 {
     // On récupère le contenu des formulaires :
     var lastname = document.forms["inscriptionform"]["lastname"].value;

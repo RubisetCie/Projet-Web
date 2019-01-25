@@ -47,17 +47,17 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="./php/connection.php" method="post">
+                    <form name="connectionform" action="./php/connection.php" method="post" onsubmit="return validateConnection()">
                         <div class="form-group">
                             <i class="fa fa-user"></i>
-                            <input type="text" class="form-control" placeholder="Username" required="required">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="password" class="form-control" placeholder="Password" required="required">                 
+                            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="required">                 
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Connexion">
                         </div>
                     </form>
                 </div>
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Modal Formulaire inscription -->
-    <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-signup" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="signup-form">
-                        <form name="inscriptionform" action="./php/inscription.php" method="post" onsubmit="return validate()">
+                        <form name="inscriptionform" action="./php/inscription.php" method="post" onsubmit="return validateInscription()">
                             <h2>Inscription</h2>
                             <p class="hint-text">Crée ton compte étudiant</p>
                             <div class="form-group">
@@ -97,10 +97,10 @@
                                 <input type="email" class="form-control" name="email" placeholder="Email" required="required">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                                <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="required">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirmer mot de passe" required="required">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="promotion" placeholder="Promotion" required="required">
