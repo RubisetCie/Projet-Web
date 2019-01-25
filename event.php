@@ -12,11 +12,14 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-     <link rel="stylesheet" type="text/css" href="./style/css/static.css">
+    <link rel="stylesheet" type="text/css" href="./style/css/static.css">
     <link rel="stylesheet" type="text/css" href="./style/css/commentary.css">
+    <link rel="shortcut icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/inscription.js"></script>
+    <script src="./js/connection.js"></script>
     
     <!-- Balises META -->
     <meta charset="utf-8">
@@ -30,7 +33,7 @@
     <header>
         <!-- Barre de navigation -->
         <?php
-            require("./res/header.html");
+            require("./res/header.php");
         ?>
     </header>
 
