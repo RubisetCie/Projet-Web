@@ -1,10 +1,11 @@
 /* 
- * Rôle     : Définit le style de la liste des associations
+ * Rôle     : Définit le style de la page d'inscrits à une association
  * Auteur   : Charafein MOHAMED
  * Date     : 25/01/2019
  */
 
-.btn-signed{
-padding-left: 1200px;
-padding-top: 10px;   
+.btn-signed
+{
+    padding-left : 1200px;
+    padding-top : 10px;
 }
