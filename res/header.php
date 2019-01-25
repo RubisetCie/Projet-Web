@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <nav class="navbar navbar-expand-lg navbar-light bg-color-nav">
     <img class="navbar-icon" src="./res/img/logo_bde.png" alt="Logo bde" width="58">
 
@@ -33,10 +32,49 @@
         </div>
     </form>
 
-    <!-- Se connecter -->
-    <div class="text-center modal-box">
-        <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#Modal1">Se connecter</button>
-    </div>
+    <!-- Les boutons de la navbar -->
+    <?php
+        // On vérifie si une session est en cours :
+        if (!isset($_SESSION["status"]))
+        {
+            echo "<div class='text-center modal-box'>
+                    <button type='button' class='btn btn-orange' data-toggle='modal' data-target='#Modal1'>Se connecter</button>
+                  </div>
+                  <div class='text-center'>
+                    <button type='button' class='btn btn-orange' data-toggle='modal' data-target='#Modal2'>S'inscrire ?</button>
+                  </div>";
+        }
+        else
+        {
+            switch ($_SESSION["status"])
+            {
+                case 0 :
+                    echo "<div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                          </div>";
+                    break;
+                case 1 :
+                    echo "<div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Nouvel événement</button>
+                          </div>
+                          <div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des inscrits</button>
+                          </div>
+                          <div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                          </div>";
+                    break;
+                case 2 :
+                    echo "<div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des photos</button>
+                          </div>
+                          <div class='text-center'>
+                            <button type='button' class='btn btn-orange' data-toggle='modal'>Déconnexion</button>
+                          </div>";
+                    break;
+            }
+        }
+    ?>
 
     <!-- Modal Formulaire connexion -->
     <div id="Modal1" class="modal fade">
@@ -66,11 +104,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- S'inscrire -->
-    <div class="text-center">
-        <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#Modal2">S'inscrire ?</button>
     </div>
 
     <!-- Modal Formulaire inscription -->

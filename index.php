@@ -32,7 +32,7 @@
     <header>
         <!-- Barre de navigation -->
         <?php
-            require("./res/header.html");
+            require("./res/header.php");
         ?>
     </header>
 
