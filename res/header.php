@@ -34,6 +34,8 @@
 
     <!-- Les boutons de la navbar -->
     <?php
+        session_start();
+    
         // On vérifie si une session est en cours :
         if (!isset($_SESSION["status"]))
         {
@@ -46,6 +48,7 @@
         }
         else
         {
+            // Sinon, on affiche des boutons différents en fonction du statut :
             switch ($_SESSION["status"])
             {
                 case 0 :

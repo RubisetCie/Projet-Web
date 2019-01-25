@@ -64,7 +64,6 @@
 
             <button class='btn btn-success btn-inscription' type='button' >Inscription</button>
         </div>
-
     </main>
 
     <footer class="container-fluid footer">
