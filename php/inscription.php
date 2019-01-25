@@ -23,25 +23,22 @@
         
         if ($test->rowCount() != 0)
         {
+            //header("Location: $referer");
             exit;
         }
         
         // On entre les nouvelles données dans la table :
+        $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
+        $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
+        $location = filter_input(INPUT_POST, "location", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = md5(filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS));
         
-        $query = $GLOBALS["pdo"]->prepare("INSERT INTO users(user_firstname, user_lastname, user_location, user_email, user_password VALUES (:firstname, :lastname, :location, :email, :password)");
-        $query->bindValue(":firstname", filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS), PDO::PARAM_STR);
-        $query->bindValue(":lastname", filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS), PDO::PARAM_STR);
-        $query->bindValue(":location", filter_input(INPUT_POST, "location", FILTER_SANITIZE_SPECIAL_CHARS), PDO::PARAM_STR);
-        $query->bindValue(":email", $email, PDO::PARAM_STR);
-        $query->bindValue(":password", $password, PDO::PARAM_STR);
-        
-        $query->execute();
+        $GLOBALS["pdo"]->exec("INSERT INTO users(user_id, user_firstname, user_lastname, user_location, user_email, user_password, user_status) VALUES (8, '$firstname', '$lastname', '$location', '$email', '$password', 0)");
     }
     catch (PDOException $e)
     {
         echo $e->getMessage();
     }
     
-    exit;
+    header("Location : $referer");
 ?>
