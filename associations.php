@@ -72,7 +72,6 @@
                         echo $e->getMessage();
                     }
                 ?>
-                
             </div>
         </div>
     </main>

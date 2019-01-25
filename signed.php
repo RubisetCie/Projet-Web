@@ -1,14 +1,7 @@
-<?php
-$connect = mysqli_connect("localhost","root","");
-$query = //entrer la requête SQL
-$result = mysqli_query($connect, $query);
-?>
-
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
-
 <head>
-    <title>Titre de la page</title>
+    <title>Liste des inscrits</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -20,7 +13,6 @@ $result = mysqli_query($connect, $query);
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/signed.css">
-
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -42,58 +34,71 @@ $result = mysqli_query($connect, $query);
     </header>
 
     <main>
-
-
         <div class="container">
-            <h2>Activité</h2>
-            <p>Voici un tableau répertoriant l'ensemble des personnes adhérentes à cette associatinon:</p>
+            <?php   
+                echo "<h2>" . filter_input(INPUT_GET, "activity", FILTER_SANITIZE_URL) . "</h2>";
+            ?>
+            <p>Voici un tableau répertoriant l'ensemble des personnes adhérentes à cette association :</p>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>nom</th>
-                        <th>prénom</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Adresse email</th>
+                        <th>Centre de formation</th>
+                        <th>Statut</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Zemri</td>
-                        <td>Salim</td>
-                    </tr>
-                    <tr>
-                        <td>Oumid</td>
-                        <td>Mohamed</td>
-                    </tr>
-                    <tr>
-                        <td>Carteron</td>
-                        <td>Matthieu</td>
-                    </tr>
-                   <?php
-                    while($row = mysqli_fetch_array($result))
-                    {
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row["nom"]; ?>
-                        </td>
-                        <td>
-                            <?php echo $row["prénom"]; ?>
-                        </td>
-                    </tr>
                     <?php
-                    }
+                        try
+                        {
+                            // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                            if (!isset($GLOBALS["pdo"]))
+                            {
+                                $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            }
+
+                            // On récupère les données :
+                            $query = $GLOBALS["pdo"]->prepare("SELECT users.user_firstname, users.user_lastname, users.user_email, users.user_location, users.user_status, activities.activity_name FROM users INNER JOIN practise ON users.user_id = practise.user_id INNER JOIN activities ON practise.activity_name = activities.activity_name WHERE activities.activity_name = :activity");
+                            $query->bindValue(":activity", filter_input(INPUT_GET, "activity", FILTER_SANITIZE_URL), PDO::PARAM_STR);
+                            $query->execute();
+
+                            // On affiche les inscrits :
+                            $table = $query->fetch(PDO::FETCH_ASSOC);
+
+                            while ($table)
+                            {
+                                echo "<tr>
+                                        <td>" . $table["user_lastname"] . "</td>
+                                        <td>" . $table["user_firstname"] . "</td>
+                                        <td>" . $table["user_email"] . "</td>
+                                        <td>" . $table["user_location"] . "</td>";
+                                
+                                switch ($table["user_status"])
+                                {
+                                    case 0 : echo "<td>Etudiant</td>"; break;
+                                    case 1 : echo "<td>Membre du BDE</td>"; break;
+                                    case 2 : echo "<td>Salarié du CESI</td>"; break;
+                                }
+                                        
+                                echo "</tr>";
+
+                                $table = $query->fetch(PDO::FETCH_ASSOC);
+                            }
+                        }
+                        catch (PDOException $e)
+                        {
+                            echo $e->getMessage();
+                        }
                     ?>
-                    
-                    <tr>
-                    </tr>
                 </tbody>
             </table>
         </div>
         <div class="btn-signed">
             <button type="button" class="btn btn-primary">Télécharger au format CSV</button>
-
             <button type="button" class="btn btn-primary">Télécharger au format PDF</button>
         </div>
-
     </main>
 
     <footer class="container-fluid footer">
