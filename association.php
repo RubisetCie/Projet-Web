@@ -35,13 +35,34 @@
 
     <main>
         <div class="container">
-            <h1 id="titre-association"> Titre Association </h1>
-            <img src="./res/img/clubs/club_cinema.jpg" class="img-assoc">
-            <p>Ostendit aliquid efficiatur vero veri parte solvantur parte nudus logikh logikh est partiendo esse in est ostendit in videtur non quo in pro non mihi vero via plane disserendi iste sit logikh sublatum parte sit sublatum quae ut dicitur falsi probatum inermis ac iudicia mihi via est concludaturque tradit modo sensibus dividendo ac falsi tradit nihil efficiatur dividendo rerum vero non parte modo efficiatur concludaturque esse modo quaerendi falsi tradit veri ambigua semel quibus quibus altera quidem ut partiendo solvantur in plane ac qua quaerendi ostendit logikh ac videtur videtur tollit in modo tollit sublatum quaerendi solvantur dicitur solvantur ac.</p>
 
-            
-            <button type="button" class="btn btn-success btn-inscription">S'inscrire</button>
+            <?php
+                    try
+                    {
+                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                        if (!isset($GLOBALS["pdo"]))
+                        {
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                        }
 
+                        // On récupère les données :
+                        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities ORDER BY activity_name");
+
+            echo "
+            <h1 class='titre-association'>" . $table["activity_name"] . "</h1>
+
+            <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . ">
+
+
+            <p>" . $table["activity_description"] . "</p>";
+            }
+                    catch (PDOException $e)
+                    {
+                        echo $e->getMessage();
+                    }
+                ?>
+
+            <button class='btn btn-success btn-inscription' type='button' >inscription</button>
         </div>
 
     </main>

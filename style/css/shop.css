@@ -21,7 +21,7 @@
     border-width : 7px;
     border-style : double;
     border-color : gray;
-    background-color : skyblue;
+    background-color : #437bd7;
 }
 
 .shop-jumbotron-title
@@ -107,3 +107,9 @@
 {
     margin-right : 10px;
 }
+
+.btn-orange {
+ 
+  color: #fff;
+  background-color:  #437bd7;
+  border-color:   #437bd7;
