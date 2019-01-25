@@ -13,7 +13,7 @@
 - X | Boutique (shop.php)
 - X | Description d'article (article.php)
 - X | Panier (cart.php)
-- M | Achat et paiement (purchase.php)
+- X | Achat et paiement (purchase.php)
 - X | Edition de produit (editproduct.php)
 - X | Conditions générales de vente (cgu.php)
 - X | Mentions légales (legals.php)
