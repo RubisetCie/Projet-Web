@@ -1,3 +1,8 @@
+X= front terminé
+O= front et back terminé
+S/M/K/C/Ma = page sans back ni front
+
+
 - X | Accueil (index.php)
 - X | Boîte à idée (boxidea.php)
 - X | Edition de profil (editprofile.php)
