@@ -23,7 +23,7 @@
         
         if ($test->rowCount() != 0)
         {
-            //header("Location: $referer");
+            header("Location: index.php");
             exit;
         }
         
@@ -40,5 +40,5 @@
         echo $e->getMessage();
     }
     
-    header("Location : $referer");
+    header("Location: index.php");
 ?>
