@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
 <head>
-    <title>Titre de la page</title>
+    <title>CESI BDE Accueil</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/home.css">
+    <link rel="shortcut icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
