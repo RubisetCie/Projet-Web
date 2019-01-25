@@ -47,7 +47,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="/examples/actions/confirmation.php" method="post">
+                    <form action="./php/connection.php" method="post">
                         <div class="form-group">
                             <i class="fa fa-user"></i>
                             <input type="text" class="form-control" placeholder="Username" required="required">
@@ -84,13 +84,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="signup-form">
-                        <form action="/examples/actions/confirmation.php" method="post">
+                        <form name="inscriptionform" action="./php/inscription.php" method="post" onsubmit="return validate()">
                             <h2>Inscription</h2>
                             <p class="hint-text">Crée ton compte étudiant</p>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-xs-6"><input type="text" class="form-control" name="Nom" placeholder="Nom" required="required"></div>
-                                    <div class="col-xs-6"><input type="text" class="form-control" name="Prénom" placeholder="Prénom" required="required"></div>
+                                    <div class="col-xs-6"><input type="text" class="form-control" name="lastname" placeholder="Nom" required="required"></div>
+                                    <div class="col-xs-6"><input type="text" class="form-control" name="firstname" placeholder="Prénom" required="required"></div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -103,10 +103,10 @@
                                 <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="Promotion" placeholder="Promotion" required="required">
+                                <input type="text" class="form-control" name="promotion" placeholder="Promotion" required="required">
                             </div>
                             <div class="form-group">
-                                <label class="checkbox-inline"><input type="checkbox" required="required"> J'accepte les <a href="#">Conditions d'utilisation</a> &amp; <a href="#">Politique de Confidentialité</a></label>
+                                <label class="checkbox-inline"><input type="checkbox" required="required">J'accepte les <a href="#">Conditions d'utilisation</a> &amp; <a href="#">Politique de Confidentialité</a></label>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-lg btn-block">S'inscrire</button>

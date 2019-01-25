@@ -17,6 +17,8 @@
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/inscription.js"></script>
+    <script src="./js/connection.js"></script>
     
     <!-- Balises META -->
     <meta charset="utf-8">

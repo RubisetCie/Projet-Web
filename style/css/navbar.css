@@ -4,6 +4,11 @@
  * Date     : 21/01/2019
  */
 
+.modal-title
+{
+    font-size : 12pt;
+}
+
 .modal-login
 {
     color : #636363;
