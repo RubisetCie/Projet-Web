@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
-
 <head>
-    <title>Titre de la page</title>
+    <title>Paiement</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -13,14 +12,17 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-     <link rel="stylesheet" type="text/css" href="./style/css/purchase.css">
+    <link rel="stylesheet" type="text/css" href="./style/css/purchase.css">
+    <link rel="shortcut icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/inscription.js"></script>
+    <script src="./js/connection.js"></script>
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
+    <meta name="description" content="Procession du paiement">
     <meta name="keywords" content="CESI,BDE">
     <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +32,7 @@
     <header>
         <!-- Barre de navigation -->
         <?php
-            require("./res/header.html");
+            require("./res/header.php");
         ?>
     </header>
 
