@@ -36,6 +36,15 @@
         
         $_SESSION["id"] = $table["user_id"];
         $_SESSION["status"] = $table["user_status"];
+        
+        // Si l'on est responsable du BDE, on récupère l'activité concernée :
+        if ($table["user_status"] == 1)
+        {
+            $res = $GLOBALS["pdo"]->query("SELECT * FROM practise WHERE user_id = " . $table["user_id"])->fetch();
+            
+            $_SESSION["activity"] = strtr($res["activity_name"], "éè", "ee");
+        }
+        
     }
     catch (PDOException $e)
     {

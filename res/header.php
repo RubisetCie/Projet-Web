@@ -58,10 +58,10 @@
                     break;
                 case 1 :
                     echo "<div class='text-center modal-box'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Nouvel événement</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./addevent\")'>Nouvel événement</button>
                           </div>
                           <div class='text-center modal-box'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des inscrits</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./signed?activity=" . $_SESSION["activity"] . "\")'>Liste des inscrits</button>
                           </div>
                           <div class='text-center'>
                             <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>
@@ -69,7 +69,7 @@
                     break;
                 case 2 :
                     echo "<div class='text-center modal-box'>
-                            <button type='button' class='btn btn-orange' data-toggle='modal'>Liste des photos</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./pictures\")'>Liste des photos</button>
                           </div>
                           <div class='text-center'>
                             <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>
