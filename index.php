@@ -54,10 +54,33 @@
         </section>
 
         <aside>
-            <img class="img-thumbnail img-home img-responsive" src="./res/img/2.jpg" alt="Party">
-                <p class="a">Isdem diebus Apollinaris Domitiani gener.</p>
-            <img class="img-thumbnail img-home img-responsive" src="./res/img/4.jpg" alt="Party">
-                <p class="a">Isdem diebus Apollinaris Domitiani gener.</p>
+            <?php
+                try
+                {
+                    // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                    if (!isset($GLOBALS["pdo"]))
+                    {
+                        $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                    }
+
+                    // On récupère les données des meilleures ventes (stock le plus bas) :
+                    $res = $GLOBALS["pdo"]->query("SELECT product_name, product_picture FROM products ORDER BY product_stock ASC LIMIT 3");
+
+                    // On affiche les produits :
+                    $table = $res->fetch(PDO::FETCH_ASSOC);
+                    while ($table)
+                    {
+                        echo "<img class='img-thumbnail img-home img-responsive' width=200px src='./res/img/products/" . $table["product_picture"] . "' alt='Topvente'>
+                              <p class='a'>" . $table["product_name"] . "</p>";
+                        
+                        $table = $res->fetch(PDO::FETCH_ASSOC);
+                    }
+                }
+                catch (PDOException $e)
+                {
+                    echo $e->getMessage();
+                }
+            ?>
         </aside>
     </main>
 
