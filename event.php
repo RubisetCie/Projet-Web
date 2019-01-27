@@ -42,7 +42,7 @@
     <main>
 
         <div class="container">
-            <h1 id="titre-association"> Titre Association </h1>
+            <h1 id="titre-association"> Titre Évènement </h1>
             <img src="./res/img/clubs/club_cinema.jpg" class="img-assoc"><br>
             <p>Ostendit aliquid efficiatur vero veri parte solvantur parte nudus logikh logikh est partiendo esse in est ostendit in videtur non quo in pro non mihi vero via plane disserendi iste sit logikh sublatum parte sit sublatum quae ut dicitur falsi probatum inermis ac iudicia mihi via est concludaturque tradit modo sensibus dividendo ac falsi tradit nihil efficiatur dividendo rerum vero non parte modo efficiatur concludaturque esse modo quaerendi falsi tradit veri ambigua semel quibus quibus altera quidem ut partiendo solvantur in plane ac qua quaerendi ostendit logikh ac videtur videtur tollit in modo tollit sublatum quaerendi solvantur dicitur solvantur ac.</p><br>
 
