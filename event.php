@@ -22,6 +22,7 @@
     <script src="./js/connection.js"></script>
     <script src="./js/uploadfile.js"></script>
     
+    
     <!-- Balises META -->
     <meta charset="utf-8">
     <meta name="description" content="Descritpion de la page">
@@ -39,12 +40,13 @@
     </header>
 
     <main>
+
         <div class="container">
             <h1 id="titre-association"> Titre Association </h1>
-            <img src="./res/img/clubs/club_cinema.jpg" class="img-assoc"><br>
-            <p>Ostendit aliquid efficiatur vero veri parte solvantur parte nudus logikh logikh est partiendo esse in est ostendit in videtur non quo in pro non mihi vero via plane disserendi iste sit logikh sublatum parte sit sublatum quae ut dicitur falsi probatum inermis ac iudicia mihi via est concludaturque tradit modo sensibus dividendo ac falsi tradit nihil efficiatur dividendo rerum vero non parte modo efficiatur concludaturque esse modo quaerendi falsi tradit veri ambigua semel quibus quibus altera quidem ut partiendo solvantur in plane ac qua quaerendi ostendit logikh ac videtur videtur tollit in modo tollit sublatum quaerendi solvantur dicitur solvantur ac.</p><br>
+            <img src="./res/img/clubs/club_cinema.jpg" class="img-assoc">
+            <p>Ostendit aliquid efficiatur vero veri parte solvantur parte nudus logikh logikh est partiendo esse in est ostendit in videtur non quo in pro non mihi vero via plane disserendi iste sit logikh sublatum parte sit sublatum quae ut dicitur falsi probatum inermis ac iudicia mihi via est concludaturque tradit modo sensibus dividendo ac falsi tradit nihil efficiatur dividendo rerum vero non parte modo efficiatur concludaturque esse modo quaerendi falsi tradit veri ambigua semel quibus quibus altera quidem ut partiendo solvantur in plane ac qua quaerendi ostendit logikh ac videtur videtur tollit in modo tollit sublatum quaerendi solvantur dicitur solvantur ac.</p>
 
-                <!------------------- Espace COMMENTAIRE ----------------->
+   <!------------------- Espace COMMENTAIRE ----------------->
 
 
 <div class="row bootstrap snippets">
@@ -62,10 +64,10 @@
                     <br>
                         
                     <!-- choix image -->
-                    <div class="container">
+                    <div>
                         <div class="row">
-                             <label for="Image" class="col-xs-1 control-label">Image:</label>
-                            <div class="col-lg-3 col-sm-3 col-12">
+                             <label for="Image" class="col-xs-2 control-label">Image:</label>
+                            <div class="col-lg-7 col-sm-6 col-12">
                                 <div class="input-group">
                                     <label class="input-group-btn">
                                         <span class="btn btn-info">
@@ -90,16 +92,15 @@
                         
                         <li class="media">
                             <a href="#" class="pull-left">
-                                <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+                                <img src="http://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-circle">
                             </a>
                             <div class="media-body">
                                 <span class="text-muted pull-right">
-                                    <small class="text-muted">30 min ago</small>
+                                    <small class="text-muted">Il y a 30 min...</small>
                                 </span>
-                                <strong class="text-success">@LaurenceCorreil</strong>
+                                <strong class="text-success">Killian Deroche</strong>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
+                                    Commentaire.
                                 </p>
                             </div>
                         </li>
@@ -115,11 +116,18 @@
 </div>
 <!------------------- Fin espace COMMENTAIRE ----------------->
 
+
+
+
+
+
+
+<!------------------------------------- FIN TEST ------------------>
         </div>
 
     </main>
-    
-<footer>
-</footer>
-   
+
+    <footer>
+     
+    </footer>
 </body>
