@@ -17,9 +17,15 @@
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- script à télécharger -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.es.min.js"></script>
+    <!--                    -->
+    
     <script src="./js/inscription.js"></script>
     <script src="./js/connection.js"></script>
-    <script src="./js/date.js"></script>
+    <script src="./js/datetimepicker.js"></script>
     <script src="./js/uploadfile.js"></script>
 
     <!-- Balises META -->
@@ -76,20 +82,57 @@
 
 
             <div>
-                	<!-- Material inline 1 -->
+                <label for="Description" class="col-xs-2 control-label">Prix:</label>
+                	<!-- Bouton Radio Gratuit -->
 				<div class="form-check form-check-inline">
-				  <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
-				  <label class="form-check-label" for="materialInline1">Gratuit</label>
+				  <input type="radio" class="form-check-input" id="radio_Gratuit" name="radio_prix">
+				  <label class="form-check-label" for="radio_Gratuit">Gratuit</label>
 				</div>
 
-				<!-- Material inline 2 -->
+				<!-- Bouton Radio Payant -->
 				<div class="form-check form-check-inline">
-				  <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
-				  <label class="form-check-label" for="materialInline2">Payant</label>
+				  <input type="radio" class="form-check-input" id="radio_payant" name="radio_prix">
+				  <label class="form-check-label" for="radio_payant">Payant</label>
 				</div>
 
             </div>
+                
+                <div>
+                    <label for="Description" class="col-xs-2 control-label">Quand:</label>
+                	<!-- Bouton Radio Récurent -->
+				<div class="form-check form-check-inline">
+				  <input type="radio" class="form-check-input" id="radio_recurent" name="radio_when">
+				  <label class="form-check-label" for="radio_recurent">Récurent</label>
+				</div>
 
+				<!-- Bouton Radio Ponctuelle -->
+				<div class="form-check form-check-inline">
+				  <input type="radio" class="form-check-input" id="radio_ponctuelle" name="radio_when">
+				  <label class="form-check-label" for="radio_ponctuelle">Ponctuelle</label>
+				</div>
+
+            </div>
+                
+               
+            <div>
+                    <label for="Description" class="col-xs-1 control-label">Date:</label>
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+
+                
+                
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success">Soumettre</button>
