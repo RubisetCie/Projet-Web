@@ -48,7 +48,7 @@
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $bdd = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                          
@@ -66,12 +66,17 @@ switch($_GET['ac'])
 {
     case 'Cinéma':
         
+        // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Cinéma'");
+        
+        //$res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Cinéma'");
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
             echo "<div class='container'>
@@ -84,11 +89,14 @@ switch($_GET['ac'])
     case 'Basketball':
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Basketball'");
+        // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
            echo "<div class='container'>
@@ -103,12 +111,14 @@ switch($_GET['ac'])
     case 'Football':
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Football'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
-        
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
 
            echo "<div class='container'>
                     <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
@@ -121,11 +131,14 @@ switch($_GET['ac'])
         
     case 'Musique':
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Musique'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
            echo "<div class='container'>
@@ -140,11 +153,14 @@ switch($_GET['ac'])
     case 'Gaming':
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Gaming'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
           echo "<div class='container'>
@@ -159,11 +175,14 @@ switch($_GET['ac'])
     case 'Soirée':
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Soirée'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
          echo "<div class='container'>
@@ -178,11 +197,14 @@ switch($_GET['ac'])
     case 'Voile':
    
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Voile'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
          echo "<div class='container'>
@@ -197,11 +219,14 @@ switch($_GET['ac'])
     case 'Oenologie':
     
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Oenologie'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
             echo "<div class='container'>
@@ -216,12 +241,14 @@ switch($_GET['ac'])
     case 'Workout':
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Workout'");
+          // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = $_GET['ac'];
+        $requete->execute();
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
-        
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
 
          echo "<div class='container'>
                     <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               

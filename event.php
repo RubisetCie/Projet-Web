@@ -48,7 +48,8 @@
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            //$GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $bdd = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                          
@@ -64,13 +65,17 @@
 switch($_GET['ev'])
 {
     case 'Lan Party':
+    
+    
         
+        // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = 'Lan Party';
+        $requete->execute();
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Lan Party'");
-
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
             echo "<div class='container'>
@@ -81,13 +86,16 @@ switch($_GET['ev'])
     break;
         
     case 'Projection film':
+      
+        // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = 'Projection film';
+        $requete->execute();
         
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Projection film'");
-
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
             echo "<div class='container'>
@@ -99,12 +107,16 @@ switch($_GET['ev'])
     
     case 'Tournoi de foot':
         
+        // On récupère les données grâce à une requête préparée :
+        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
+        $requete->bindParam(':name', $name);
+        $name = 'Tournoi de foot';
+        $requete->execute();
         
-        // On récupère les données :
-        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Tournoi de foot'");
+        
 
         // On affiche les activités :
-        $table = $res->fetch(PDO::FETCH_ASSOC);
+        $table = $requete->fetch(PDO::FETCH_ASSOC);
         
 
             echo "<div class='container'>
