@@ -24,12 +24,6 @@ section
 aside
 {
     position: relative;
-    bottom: 250px;
+    bottom: 260px;
     left: 800px;
-    
 }
-
-@media screen and (max-width: 400px) {
-  .ro, aside {   
-    flex-direction: row;
-  }
