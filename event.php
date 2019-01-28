@@ -40,11 +40,82 @@
     </header>
 
     <main>
+        
+ <?php
+        
+    try
+                    {
+                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                        if (!isset($GLOBALS["pdo"]))
+                        {
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                        }
 
-        <div class="container">
-            <h1 id="titre-association"> Titre Évènement </h1>
-            <img src="./res/img/clubs/club_cinema.jpg" class="img-assoc"><br>
-            <p>Ostendit aliquid efficiatur vero veri parte solvantur parte nudus logikh logikh est partiendo esse in est ostendit in videtur non quo in pro non mihi vero via plane disserendi iste sit logikh sublatum parte sit sublatum quae ut dicitur falsi probatum inermis ac iudicia mihi via est concludaturque tradit modo sensibus dividendo ac falsi tradit nihil efficiatur dividendo rerum vero non parte modo efficiatur concludaturque esse modo quaerendi falsi tradit veri ambigua semel quibus quibus altera quidem ut partiendo solvantur in plane ac qua quaerendi ostendit logikh ac videtur videtur tollit in modo tollit sublatum quaerendi solvantur dicitur solvantur ac.</p><br>
+                         
+                    }
+                    catch (PDOException $e)
+                    {
+                        echo $e->getMessage();
+                    }
+     ?>
+
+        
+<?php
+switch($_GET['ev'])
+{
+    case 'Lan Party':
+        
+        
+        // On récupère les données :
+        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Lan Party'");
+
+        // On affiche les activités :
+        $table = $res->fetch(PDO::FETCH_ASSOC);
+        
+
+            echo "<div class='container'>
+                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
+                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
+                    <p>" . $table["event_description"] . "</p> <br>
+             </div>";
+    break;
+        
+    case 'Projection film':
+        
+        
+        // On récupère les données :
+        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Projection film'");
+
+        // On affiche les activités :
+        $table = $res->fetch(PDO::FETCH_ASSOC);
+        
+
+            echo "<div class='container'>
+                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
+                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
+                    <p>" . $table["event_description"] . "</p> <br>
+             </div>";
+    break;
+    
+    case 'Tournoi de foot':
+        
+        
+        // On récupère les données :
+        $res = $GLOBALS["pdo"]->query("SELECT * FROM events  WHERE event_name = 'Tournoi de foot'");
+
+        // On affiche les activités :
+        $table = $res->fetch(PDO::FETCH_ASSOC);
+        
+
+            echo "<div class='container'>
+                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
+                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
+                    <p>" . $table["event_description"] . "</p> <br>
+             </div>";
+    break;
+}
+?>
+            
 
    <!------------------- Espace COMMENTAIRE ----------------->
 
@@ -60,6 +131,7 @@
                 <!-- TextArea pour écrire un commentaire -->
                 
                 <div class="panel-body">
+                    <form method="POST">
                     <textarea class="form-control" placeholder="écrire un commentaire..." rows="3"></textarea>
                     <br>
                         
@@ -81,10 +153,10 @@
                     </div>
                     
                     <!-- Poster le commentaire -->
-                    <button type="button" class="btn btn-info pull-right">Poster</button>
+                    <input type="submit" class="btn btn-info pull-right" value="poster">
                     <div class="clearfix"></div>
                     <hr>
-                    
+                    </form>
                     <!-- Liste de commentaire -->
                     <ul class="media-list">
                 

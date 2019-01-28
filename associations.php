@@ -45,7 +45,7 @@
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                         // On récupère les données :
@@ -62,7 +62,7 @@
                                         <div class='card-body'>
                                             <h5 class='card-title border-bottom pb-3'>" . $table["activity_name"] . "</h5>
                                             <p class='card-text'>" . $table["activity_description"] . "</p>
-                                            <a href='#' class='btn btn-sm btn-info float-right'>Lire plus</a>
+                                            <a href='./association?ac=". $table["activity_name"] . "' class='btn btn-sm btn-info float-right'>Lire plus</a>
                                         </div>
                                     </div>
                                  </div>";
@@ -79,10 +79,10 @@
         </div>
     </main>
 
-    <footer class="container-fluid footer">
+    <footers>
         <!-- Pied de page -->
-        <?php
-            require("./res/footer.html");
+      <?php
+            //require("./res/footer.html");
         ?>
     </footer>
 </body>
