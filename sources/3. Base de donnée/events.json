@@ -1,0 +1,11 @@
+[
+{"type":"header","version":"4.8.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cesiprojet"},
+{"type":"table","name":"events","database":"cesiprojet","data":
+[
+{"event_name":"Lan Party","event_description":"Participez à notre compétitions fifa 19 !","event_picture":"event_lan.jpg"},
+{"event_name":"Projection film","event_description":"Rejoignez-nous pour une projection de film !","event_picture":"event_film.jpg"},
+{"event_name":"Tournoi de foot","event_description":"Rejoignez-nous au stade pour un FIVE","event_picture":"event_five.jpg"}
+]
+}
+]
