@@ -27,7 +27,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Descritpion de la page">
     <meta name="keywords" content="CESI,BDE">
-    <meta name="author" content="Matthieu CARTERON">
+    <meta name="author" content="Killian DEROCHE">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -143,26 +143,27 @@ switch($_GET['ev'])
                 <!-- TextArea pour écrire un commentaire -->
                 
                 <div class="panel-body">
-                    <form method="POST">
-                    <textarea class="form-control" placeholder="écrire un commentaire..." rows="3"></textarea>
+                    <form name="commentform" action="./php/send_comments.php" method="post">
+                    <input  type="text" placeholder="pseudo">
+                    <textarea class="form-control" name="commentaire" placeholder="écrire un commentaire..." rows="3"></textarea>
                     <br>
                         
                     <!-- choix image -->
-                    <div>
+                  <!--  <div>
                         <div class="row">
                              <label for="Image" class="col-xs-2 control-label">Image:</label>
                             <div class="col-lg-7 col-sm-6 col-12">
                                 <div class="input-group">
                                     <label class="input-group-btn">
                                         <span class="btn btn-info">
-                                            Choisir&hellip; <input type="file" id="Image"style="display: none;" multiple >
+                                            Choisir&hellip; <input type="file" id="Image" name="uploadfile" style="display: none;" multiple >
                                         </span>
                                     </label>
                                     <input type="text" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Poster le commentaire -->
                     <input type="submit" class="btn btn-info pull-right" value="poster">
@@ -201,7 +202,7 @@ switch($_GET['ev'])
 <!------------------- Fin espace COMMENTAIRE ----------------->
 
 
-        </div>
+        
 
     </main>
 
