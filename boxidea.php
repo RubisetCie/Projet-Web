@@ -39,23 +39,38 @@
 
     <main>
         <section>
-            <!-- Idées statique -->
-            <p class="idea">
-                Dum haec in oriente aguntur, Arelate hiemem agens Constantius post theatralis ludos atque circenses ambitioso editos apparatu diem sextum idus Octobres, qui imperii eius annum tricensimum terminabat, insolentiae pondera gravius librans, siquid dubium deferebatur aut falsum, pro liquido accipiens et conperto, inter alia excarnificatum Gerontium Magnentianae comitem partis exulari maerore multavit.
-            </p>
+            <?php
+                    try
+                    {
+                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+                        if (!isset($GLOBALS["pdo"]))
+                        {
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                        }
+
+                        // On récupère les données et on les affiche:
+                        $res = $GLOBALS["pdo"]->query("SELECT * FROM ideas ORDER BY idea_id");
+
+                        // On affiche les activités :
+                        $table = $res->fetch(PDO::FETCH_ASSOC);
+                        
+                        while ($table)
+                        {
+                            echo "<div class='row'>
+                                    
+                                    <div class='card bg-light'>" . 
+                                        $table["idea_title"] . "<br>" . $table["idea_description"] .
+                                    "</div>
+                                 </div>";
+                            
+                            $table = $res->fetch(PDO::FETCH_ASSOC);
+                        }
+                    }
+                    catch (PDOException $e)
+                    {
+                        echo $e->getMessage();
+                    }
+                ?>
+            
+            
         </section>
-
-        <!-- Meilleures idées -->
-        <aside>
-            <img class="img-idea" src="https://risibank.fr/cache/stickers/d1076/107688-full.gif">
-            <p class="ideatop">Dum haec in oriente aguntur.</p>
-        </aside>
-    </main>
-
-    <footer class="container-fluid footer">
-        <!-- Pied de page -->
-        <?php
-            require("./res/footer.html");
-        ?>
-    </footer>
-</body>
