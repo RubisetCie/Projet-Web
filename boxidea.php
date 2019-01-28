@@ -71,6 +71,11 @@
                         echo $e->getMessage();
                     }
                 ?>
-            
-            
         </section>
+
+        <aside>
+            <h3>Proposez votre idée</h3>
+
+            <textarea rows="15" cols="50"></textarea>
+            
+        </aside>
