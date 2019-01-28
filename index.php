@@ -41,11 +41,6 @@
         <section>
             <article>
             <img class="top img-home img-thumbnail img-responsive" src="./res/img/party.jpg" alt="Party">
-                <p class="txt">
-                    Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
-                    Ideoque fertur neminem aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt. et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte.
-                    Isdem diebus Apollinaris Domitiani gener, paulo ante agens palatii Caesaris curam, ad Mesopotamiam missus a socero per militares numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis Antiochiae gestis per minorem Armeniam lapsus Constantinopolim petit exindeque per protectores retractus artissime tenebatur.
-                </p>
             </article>
             <article>
                 <img class="img-thumbnail img-home img-responsive" src="./res/img/logo_cesi.png" alt="Image" width="300" height="150">
@@ -58,7 +53,7 @@
 
         <aside>
             <?php
-                try
+              /*  try
                 {
                     // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                     if (!isset($GLOBALS["pdo"]))
@@ -71,6 +66,7 @@
 
                     // On affiche les produits :
                     $table = $res->fetch(PDO::FETCH_ASSOC);
+                    
                     while ($table)
                     {
                         echo "<img class='img-thumbnail img-home img-responsive' width=200px src='./res/img/products/" . $table["product_picture"] . "' alt='Topvente'>
@@ -82,7 +78,7 @@
                 catch (PDOException $e)
                 {
                     echo $e->getMessage();
-                }
+                }*/
             ?>
         </aside>
     </main>
