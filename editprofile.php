@@ -32,13 +32,15 @@
             require("./res/header.php");
         ?>
     </header>
-    
+
     <main>
         <div class="container">
             <h1>Edition du Profil</h1>
             <hr>
+                            <form name="connectionform" action="./php/scripteditproduct.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
+
             <div class="row">
-                
+
                 <!-- Colonne de gauche -->
                 <div class="col-md-3">
                     <div class="text-center">
@@ -57,61 +59,56 @@
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Nom :</label>
                             <div class="col-lg-8"><!--col-lg-8 permet de definir la longueur de la bar de l'input, ici la longueur est de 8-->
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="user_lastname">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Prénom :</label>
                             <div class="col-lg-8">
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="user_firstname">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Pseudo :</label>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" >
+                                <input class="form-control" type="text" name="user_nickname">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Date de naissance :</label>
                             <div class="col-md-8">
-                                <input class="form-control" type="texte" value="JJ/MM/AAAA">
+                                <input class="form-control" type="texte" value="JJ/MM/AAAA" name="user_birthday">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Centre de formation :</label>
                             <div class="col-lg-8">
-                                <input class="form-control" type="text" value="">
+                                <input class="form-control" type="text" value="précisez la ville" name="user_location">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Email :</label>
                             <div class="col-lg-8">
-                                <input class="form-control" type="text" value="exemple@gmail.com">
+                                <input class="form-control" type="text" value="exemple@gmail.com" name="user_email">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Mot de passe :</label>
                             <div class="col-md-8">
-                                <input class="form-control" type="password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label">Confirmer mot de passe :</label>
-                            <div class="col-md-8">
-                                <input class="form-control" type="password">
+                                <input class="form-control" type="password" name="user_password">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <input type="button" class="btn btn-warning" value="Confirmer"> 
-                                <input type="reset" class="btn btn-dark" value="Annuler">
+                                <button type="submit" class="btn btn-warning" onclick='window.location.replace(\"./php/scripteditprofile.php\")'>Confirmer</button> 
+                                <button type="submit" class="btn btn-dark" onclick='window.location.replace(\"./index.php\")'>annuler</button>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>
+                
+            </div></form>
         </div>
     </main>
 
