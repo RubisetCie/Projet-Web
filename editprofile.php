@@ -32,7 +32,7 @@
             require("./res/header.php");
         ?>
     </header>
-
+    
     <main>
         <div class="container">
             <h1>Edition du Profil</h1>
