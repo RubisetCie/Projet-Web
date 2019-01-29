@@ -44,16 +44,16 @@
     </header>
 
     <main>
+        <form name="connectionform" action="./php/scripteditevent.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
         <div class="modal-dialog" role="document">
             <div class="modal-content bg-color">
                 <div class="modal-header">
                     <h5 class="or">Editer une Association</h5>
                 </div>
-                
                 <div class="form-group">
                     <label for="Tire_assoc" class="col-xs-2 control-label">Titre:</label>
                         <div class="col-xs-9">
-                        <input type="text" class="form-control" id="Titre_assoc" name="Tire_assoc" placeholder="Ecrire le titre">
+                        <input type="text" class="form-control" id="Titre_assoc" name="event_name" placeholder="Ecrire le titre">
                         </div>
                 </div>
 
@@ -64,7 +64,7 @@
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn btn-orange">
-                                        Choisir&hellip; <input type="file" id="Image"style="display: none;" multiple >
+                                        Choisir&hellip; <input type="file" name="event_picture" id="Image"style="display: none;" multiple >
                                     </span>
                                 </label>
                                 <input type="text" class="form-control" readonly>
@@ -72,12 +72,11 @@
                         </div>
                     </div>
                 </div>
-					
 					           
       
                 <div class="form-group green-border-focus">
                   <label for="Description" class="col-xs-1 control-label">Description:</label>
-                  <textarea class="form-control" id="Description" rows="2" placeholder="Ecrivez la description de l'association"></textarea>
+                  <textarea class="form-control" name="event_description" id="Description" rows="2" placeholder="Ecrivez la description de l'association"></textarea>
                 </div>
 
 
@@ -120,7 +119,7 @@
                     <div class='col-sm-6'>
                         <div class="form-group">
                             <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" />
+                                <input type='text' name="date" class="form-control" />
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -135,10 +134,15 @@
                 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Soumettre</button>
+                    <button type="submit" class="btn btn-success" onclick='window.location.replace(\"./php/scripteditevent.php\")'>Soumettre</button>
                 </div>
+                     
+
             </div>
         </div>
+    
+ </form>
+
     </main>
     
     <footer class="container-fluid footer">
