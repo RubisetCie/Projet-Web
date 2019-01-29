@@ -18,6 +18,9 @@
                 <a class="text-nav" href="./associations">Associations</a>
             </li>
             <li class="nav-item">
+                <a class="text-nav" href="./events">Évènements</a>
+            </li>
+            <li class="nav-item">
                 <a class="text-nav" href="./boxidea">Boite à idées</a>
             </li>
         </ul>
@@ -58,7 +61,7 @@
                     break;
                 case 1 :
                     echo "<div class='text-center modal-box'>
-                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./addevent\")'>Nouvel événement</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./editevent\")'>Nouvel événement</button>
                           </div>
                           <div class='text-center modal-box'>
                             <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./signed?activity=" . $_SESSION["activity"] . "\")'>Liste des inscrits</button>
@@ -110,7 +113,7 @@
     </div>
 
     <!-- Modal Formulaire inscription -->
-    <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="Modal2" tabindex="-2" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-signup" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -139,13 +142,13 @@
                                 <input type="password" class="form-control" name="confirm_password" placeholder="Confirmer mot de passe" required="required">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="promotion" placeholder="Promotion" required="required">
+                                <input type="text" class="form-control" name="location" placeholder="Locaisation Centre Cesi" required="required">
                             </div>
                             <div class="form-group">
                                 <label class="checkbox-inline"><input type="checkbox" required="required">J'accepte les <a href="./legals.php">Conditions d'utilisation</a> &amp; <a href="#">Politique de Confidentialité</a></label>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-lg btn-block">S'inscrire</button>
+                                <input type="submit" class="btn btn-success btn-lg btn-block" value="S'inscrire">
                             </div>
                         </form>
                     </div>
