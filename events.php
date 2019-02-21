@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
 <head>
-    <title>Liste des associations</title>
+    <title>Liste des événements</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/associations.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -45,31 +45,28 @@
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                         // On récupère les données :
-                        $res = $GLOBALS["pdo"]->query("SELECT * FROM events ORDER BY event_name");
+                        $res = $GLOBALS["pdo"]->query("SELECT * FROM manifestations ORDER BY manifestation_title");
 
                         // On affiche les activités :
                         $table = $res->fetch(PDO::FETCH_ASSOC);
-                        
-           
-                        
+
                         while ($table)
                         {
                             echo "<div class='col-md-4'>
                                     <div class='card bg-light'>
-                                        <img class='card-img-top' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . ">
+                                        <img class='card-img-top' src='./res/img/events/" . $table["manifestation_picture"] . "' alt=" . $table["manifestation_title"] . ">
                                         <div class='card-body'>
-                                            <h5 class='card-title border-bottom pb-3'>" . $table["event_name"] . "</h5>
-                                            <p class='card-text'>" . $table["event_description"] . "</p>
-                                            <a href='./event?ev=". $table["event_name"] . "' class='btn btn-sm btn-info float-right'>Lire plus</a>
+                                            <h5 class='card-title border-bottom pb-3'>" . $table["manifestation_title"] . "</h5>
+                                            <p class='card-text'>" . $table["manifestation_description"] . "</p>
+                                            <a href='./event?ev=" . $table["manifestation_id"] . "' class='btn btn-sm btn-info float-right'>Lire plus</a>
                                         </div>
                                     </div>
                                  </div>";
-                            
-                            
+
                             $table = $res->fetch(PDO::FETCH_ASSOC);
                         }
                     }

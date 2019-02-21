@@ -1,0 +1,29 @@
+{
+  "name": "cesiprojet-api",
+  "version": "1.0.0",
+  "description": "API REST associée au site Web du CESI BDE.",
+  "main": "api/server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubisetCie/Projet-Web.git"
+  },
+  "keywords": [
+    "CESI",
+    "BDE"
+  ],
+  "author": "Matthieu CARTERON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubisetCie/Projet-Web/issues"
+  },
+  "homepage": "https://github.com/RubisetCie/Projet-Web#readme"
+}

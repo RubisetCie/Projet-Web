@@ -45,7 +45,7 @@
             <article>
                 <img class="img-thumbnail img-home img-responsive" src="./res/img/logo_cesi.png" alt="Image" width="300" height="150">
                 <p class="txt">
-                    Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
+                    Sur ce site Web, vous pourrez découvrir les innombrables activités du BDE, joindre à des événements et même parcourir notre liste de Goodies !
                 </p>
                 <a href="https://www.cesi.fr/">Lien CESI</a>
             </article>
@@ -53,16 +53,16 @@
 
         <aside>
             <?php
-              /*  try
+                try
                 {
                     // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                     if (!isset($GLOBALS["pdo"]))
                     {
-                        $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                        $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                     }
 
                     // On récupère les données des meilleures ventes (stock le plus bas) :
-                    $res = $GLOBALS["pdo"]->query("SELECT product_name, product_picture FROM products ORDER BY product_stock ASC LIMIT 3");
+                    $res = $GLOBALS["pdo"]->query("SELECT product_id, product_name, product_picture FROM products ORDER BY product_stock ASC LIMIT 2");
 
                     // On affiche les produits :
                     $table = $res->fetch(PDO::FETCH_ASSOC);
@@ -70,7 +70,7 @@
                     while ($table)
                     {
                         echo "<img class='img-thumbnail img-home img-responsive' width=200px src='./res/img/products/" . $table["product_picture"] . "' alt='Topvente'>
-                              <p class='a'>" . $table["product_name"] . "</p>";
+                              <a class='a' href='./article?id=" . $table["product_id"] . "'>" . $table["product_name"] . "</a>";
                         
                         $table = $res->fetch(PDO::FETCH_ASSOC);
                     }
@@ -78,7 +78,7 @@
                 catch (PDOException $e)
                 {
                     echo $e->getMessage();
-                }*/
+                }
             ?>
         </aside>
     </main>

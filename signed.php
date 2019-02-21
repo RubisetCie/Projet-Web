@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/signed.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -59,12 +59,14 @@
                             // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                             if (!isset($GLOBALS["pdo"]))
                             {
-                                $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                                $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                             }
+                            
+                            session_start();
 
                             // On récupère les données :
                             $query = $GLOBALS["pdo"]->prepare("SELECT users.user_firstname, users.user_lastname, users.user_email, users.user_location, users.user_status, activities.activity_name FROM users INNER JOIN practise ON users.user_id = practise.user_id INNER JOIN activities ON practise.activity_name = activities.activity_name WHERE activities.activity_name = :activity");
-                            $query->bindValue(":activity", filter_input(INPUT_GET, "activity", FILTER_SANITIZE_URL), PDO::PARAM_STR);
+                            $query->bindValue(":activity", $_SESSION["activity"], PDO::PARAM_STR);
                             $query->execute();
 
                             // On affiche les inscrits :
@@ -73,10 +75,10 @@
                             while ($table)
                             {
                                 echo "<tr>
-                                        <td>" . $table["user_lastname"] . "</td>
-                                        <td>" . $table["user_firstname"] . "</td>
-                                        <td>" . $table["user_email"] . "</td>
-                                        <td>" . $table["user_location"] . "</td>";
+                                      <td>" . $table["user_lastname"] . "</td>
+                                      <td>" . $table["user_firstname"] . "</td>
+                                      <td>" . $table["user_email"] . "</td>
+                                      <td>" . $table["user_location"] . "</td>";
                                 
                                 switch ($table["user_status"])
                                 {

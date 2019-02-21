@@ -1,7 +1,30 @@
 <!DOCTYPE html>
+<?php
+    try
+    {
+        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+        if (!isset($GLOBALS["pdo"]))
+        {
+            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+        }
+        
+        // On récupère les données :
+        $query = $GLOBALS["pdo"]->prepare("SELECT * FROM activities WHERE activity_name = :association");
+        $query->bindValue(":association", filter_input(INPUT_GET, "ac", FILTER_SANITIZE_URL), PDO::PARAM_STR);
+        $query->execute();
+        
+        // On récupère les informations sur l'association :
+        $table = $query->fetch(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e)
+    {
+        echo $e->getMessage();
+    }
+?>
+
 <!-- Informations d'en-tête -->
 <head>
-    <title>Titre de la page</title>
+    <title><?php echo str_replace("OE", "Œ", $table["activity_name"]) ?></title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -14,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/static.css">
     <link rel="stylesheet" type="text/css" href="./style/css/commentary.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -22,10 +45,8 @@
     <script src="./js/connection.js"></script>
     <script src="./js/uploadfile.js"></script>
     
-    
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
     <meta name="keywords" content="CESI,BDE">
     <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,230 +61,20 @@
     </header>
 
     <main>
-        
-    <?php
-        
-         try
-                    {
-                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
-                        if (!isset($GLOBALS["pdo"]))
-                        {
-                            $bdd = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-                        }
-
-                         
-                    }
-                    catch (PDOException $e)
-                    {
-                        echo $e->getMessage();
-                    }
-    ?>
-
-
-        
-<?php
-switch($_GET['ac'])
-{
-    case 'Cinéma':
-        
-        // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-        
-        
-        //$res = $GLOBALS["pdo"]->query("SELECT * FROM activities  WHERE activity_name = 'Cinéma'");
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
+        <?php
+            // On affiche les informations sur l'association :
             echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-    break; 
-        
-    case 'Basketball':
-        
-        
-        // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-           echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Football':
-        
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-
-           echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Musique':
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-           echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-    
-    case 'Gaming':
-        
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-          echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Soirée':
-        
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-         echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Voile':
-   
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-         echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Oenologie':
-    
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
-            echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-        
-    case 'Workout':
-        
-        
-          // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM activities WHERE activity_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = $_GET['ac'];
-        $requete->execute();
-
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-
-         echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["activity_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "> <br>           
-                    <p>" . $table["activity_description"] . "</p> <br>
-             </div>";
-        
-        
-    break;
-}
-?>
-        
-
+                  <h1 id='titre-association'>" . str_replace("OE", "Œ", $table["activity_name"]) ."</h1><br>
+                  <img class='img-assoc' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . "><br>
+                  <p>" . $table["activity_description"] . "</p><br>
+                  </div>";
+        ?>
     </main>
-
+    
     <footer>
+        <!-- Pied de page -->
+        <?php
+            require("./res/footer.html");
+        ?>
     </footer>
 </body>

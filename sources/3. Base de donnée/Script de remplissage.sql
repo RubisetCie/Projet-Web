@@ -46,7 +46,7 @@ VALUES
 	("Gaming", "Participez à des compétitions de jeux-vidéos en ligne avec les étudiants !", "club_gaming.jpg"),
 	("Cinéma", "Développez votre culture du septième art et votre esprit critique en compagnie de futurs ingénieurs !", "club_cinema.jpg"),
 	("Musique", "Organisez des concerts rythmés et devenez un virtuose parmis vos pairs futurs ingénieurs !", "club_musique.jpg"),
-	("Œnologie", "Retrouvez-nous dans des sorties entre futurs ingénieurs afin de complaire votre culture cullinaire !", "club_oenologie.jpg"),
+	("OEnologie", "Retrouvez-nous dans des sorties entre futurs ingénieurs afin de complaire votre culture cullinaire !", "club_oenologie.jpg"),
 	("Basketball", "Intégrez une de nos équipe de basketball et développez votre esprit d'équipe !", "club_basketball.jpg"),
 	("Football", "Rejoignez l'une de nos équipe de football et participez à des compétitions !", "club_football.jpg"),
 	("Workout", "Développez votre physique à la salle de sport entre étudiants ingénieurs !", "club_workout.jpg"),

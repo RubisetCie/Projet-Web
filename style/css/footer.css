@@ -26,19 +26,13 @@
     font-family : "Open sans", sans-serif;
     font-weight : lighter;
     
-   /* padding : 0.0002em;
-    position:absolute;
-    bottom:0px;*/
-   
-    width:100%; 
-   height:100px;
-   position:fixed;
-   top: 100%; 
-   margin:-95px auto 0 auto;
+    position : fixed;
 
-  
+    width : 100%;
+    height : 100px;
+    bottom : 0;
+    margin : -95px auto 0 auto;
 
-    
     color : black;
 }
 

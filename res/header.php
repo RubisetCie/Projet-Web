@@ -64,7 +64,7 @@
                             <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./editevent\")'>Nouvel événement</button>
                           </div>
                           <div class='text-center modal-box'>
-                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./signed?activity=" . $_SESSION["activity"] . "\")'>Liste des inscrits</button>
+                            <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./signed\")'>Liste des inscrits</button>
                           </div>
                           <div class='text-center'>
                             <button type='button' class='btn btn-orange' onclick='window.location.replace(\"./php/deconnection.php\")'>Déconnexion</button>

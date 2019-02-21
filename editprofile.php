@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Informations d'en-tête -->
 <head>
-    <title>Edition du profil</title>
+    <title>Edition profil</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -37,7 +37,7 @@
         <div class="container">
             <h1>Edition du Profil</h1>
             <hr>
-                            <form name="connectionform" action="./php/scripteditproduct.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
+            <form name="connectionform" action="./php/scripteditproduct.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
 
             <div class="row">
 

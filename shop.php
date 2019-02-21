@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/shop.css">
+    <link rel="shortcut icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -28,7 +29,7 @@
     <header>
         <!-- Barre de navigation -->
         <?php
-            require("./res/header.html");
+            require("./res/header.php");
         ?>
     </header>
 
@@ -52,11 +53,11 @@
                                 // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                                 if (!isset($GLOBALS["pdo"]))
                                 {
-                                    $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                                    $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                                 }
 
                                 // On récupère les données des meilleures ventes (stock le plus bas) :
-                                $ress = $GLOBALS["pdo"]->query("SELECT product_name, product_description, product_picture FROM products ORDER BY product_stock ASC LIMIT 4");
+                                $ress = $GLOBALS["pdo"]->query("SELECT product_id, product_name, product_description, product_picture FROM products ORDER BY product_stock ASC LIMIT 4");
 
                                 // On récupère les produits :
                                 $tables = $ress->fetch(PDO::FETCH_ASSOC);
@@ -89,7 +90,7 @@
                                         echo "<div class='item active'>
                                                 <img src='./res/img/products/" . $tables["product_picture"] . "' align='center' alt='" . $tables["product_name"] . "'>
                                                 <div class='carousel-caption'>
-                                                    <h3>" . $tables["product_name"] . "</h3>
+                                                    <a href='./article?id=" . $tables["product_id"] . "'>" . $tables["product_name"] . "</a>
                                                     <p>" . $tables["product_description"] . "</p>
                                                 </div>
                                               </div>";
@@ -99,7 +100,7 @@
                                         echo "<div class='item'>
                                                 <img src='./res/img/products/" . $tables["product_picture"] . "' align='center' alt='" . $tables["product_name"] . "'>
                                                 <div class='carousel-caption'>
-                                                    <h3>" . $tables["product_name"] . "</h3>
+                                                    <a href='./article?id=" . $tables["product_id"] . "'>" . $tables["product_name"] . "</a>
                                                     <p>" . $tables["product_description"] . "</p>
                                                 </div>
                                               </div>";
@@ -134,7 +135,7 @@
                         try
                         {
                             // On récupère les données :
-                            $res = $GLOBALS["pdo"]->query("SELECT product_name, product_picture, product_price, product_stock FROM products");
+                            $res = $GLOBALS["pdo"]->query("SELECT product_id, product_name, product_picture, product_price, product_stock FROM products");
 
                             // On affiche les produits :
                             $table = $res->fetch(PDO::FETCH_ASSOC);
@@ -149,7 +150,7 @@
                                                 <img src='./res/img/products/" . $table["product_picture"] . "' alt='" . $table["product_name"] . "'/>
                                             </div>
                                             <div class='product-desc'>
-                                                <h4 class='product-title'>" . $table["product_name"] . "</h4>
+                                                <a class='product-title' href='./article?id=" . $tables["product_id"] . "'>" . $table["product_name"] . "</a>
                                                 <div class='product-price'>" . $table["product_price"] . " €
                                                     <nav class='product-menu'>
                                                         <a href='#'><i class='fa fa-cart-plus fa-2x'></i></a>
@@ -171,12 +172,9 @@
             </section>
 
             <aside>
-                
-                <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#Modal2" style="width:200px ; height: 100px" >passer la commande</button>
-                
+                <button type="button" class="btn btn-orange" data-toggle="modal" data-target="#Modal2" style="width:200px ; height: 100px" >Passer commande</button>
             </aside>
         </div>
-
     </section>
     <footer class="container-fluid footer">
         <!-- Pied de page -->

@@ -1,7 +1,30 @@
 <!DOCTYPE html>
+<?php
+    try
+    {
+        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+        if (!isset($GLOBALS["pdo"]))
+        {
+            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+        }
+        
+        // On récupère les données :
+        $query = $GLOBALS["pdo"]->prepare("SELECT * FROM manifestations WHERE manifestation_id = :manifestation");
+        $query->bindValue(":manifestation", filter_input(INPUT_GET, "ev", FILTER_SANITIZE_URL), PDO::PARAM_STR);
+        $query->execute();
+        
+        // On récupère les informations sur l'association :
+        $table = $query->fetch(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e)
+    {
+        echo $e->getMessage();
+    }
+?>
+
 <!-- Informations d'en-tête -->
 <head>
-    <title>Titre de la page</title>
+    <title><?php echo $table["activity_name"] ?></title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -14,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/static.css">
     <link rel="stylesheet" type="text/css" href="./style/css/commentary.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -40,173 +63,80 @@
     </header>
 
     <main>
-        
- <?php
-        
-    try
-                    {
-                        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
-                        if (!isset($GLOBALS["pdo"]))
-                        {
-                            //$GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-                            $bdd = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-                        }
-
-                         
-                    }
-                    catch (PDOException $e)
-                    {
-                        echo $e->getMessage();
-                    }
-     ?>
-
-        
-<?php
-switch($_GET['ev'])
-{
-    case 'Lan Party':
-    
-    
-        
-        // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = 'Lan Party';
-        $requete->execute();
-        
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
-
+        <?php
             echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
-                    <p>" . $table["event_description"] . "</p> <br>
-             </div>";
-    break;
+                    <h1 id='titre-association'>" . $table["manifestation_title"] ."</h1> <br>               
+                    <img class='img-assoc' src='./res/img/events/" . $table["manifestation_picture"] . "' alt=" . $table["manifestation_title"] . "> <br>           
+                    <p>" . $table["manifestation_description"] . "</p> <br>
+                 </div>";
+        ?>
         
-    case 'Projection film':
-      
-        // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = 'Projection film';
-        $requete->execute();
-        
-        
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
+        <!-- Espace Commentaire -->
+        <div class="row bootstrap snippets">
+            <div class="col-md-6 col-md-offset-3 col-sm-12">
+                <div class="comment-wrapper">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Espace Commentaire</div>
 
-            echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
-                    <p>" . $table["event_description"] . "</p> <br>
-             </div>";
-    break;
-    
-    case 'Tournoi de foot':
-        
-        // On récupère les données grâce à une requête préparée :
-        $requete = $bdd->prepare("SELECT * FROM events WHERE event_name =:name ");
-        $requete->bindParam(':name', $name);
-        $name = 'Tournoi de foot';
-        $requete->execute();
-        
-        
+                        <!-- La zone de texte pour écrire un commentaire -->
+                        <div class="panel-body">
+                            <form name="commentform" action="./php/send_comments.php" method="post">
+                                <input  type="text" placeholder="pseudo">
+                                <textarea class="form-control" name="commentaire" placeholder="Ecrire un commentaire..." rows="3"></textarea>
+                                <br>
 
-        // On affiche les activités :
-        $table = $requete->fetch(PDO::FETCH_ASSOC);
-        
+                                <!-- choix image -->
+                              <!--  <div>
+                                    <div class="row">
+                                         <label for="Image" class="col-xs-2 control-label">Image:</label>
+                                        <div class="col-lg-7 col-sm-6 col-12">
+                                            <div class="input-group">
+                                                <label class="input-group-btn">
+                                                    <span class="btn btn-info">
+                                                        Choisir&hellip; <input type="file" id="Image" name="uploadfile" style="display: none;" multiple >
+                                                    </span>
+                                                </label>
+                                                <input type="text" class="form-control" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
 
-            echo "<div class='container'>
-                    <h1 id='titre-association'>" . $table["event_name"] ."</h1> <br>               
-                    <img class='img-assoc' src='./res/img/events/" . $table["event_picture"] . "' alt=" . $table["event_name"] . "> <br>           
-                    <p>" . $table["event_description"] . "</p> <br>
-             </div>";
-    break;
-}
-?>
-            
+                                <!-- Poster le commentaire -->
+                                <input type="submit" class="btn btn-info pull-right" value="Poster">
+                                <div class="clearfix"></div><hr>
+                            </form>
 
-   <!------------------- Espace COMMENTAIRE ----------------->
+                            <!-- Liste de commentaire -->
+                            <ul class="media-list">
 
-
-<div class="row bootstrap snippets">
-    <div class="col-md-6 col-md-offset-3 col-sm-12">
-        <div class="comment-wrapper">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    Espace Commentaire
-                </div>
-                
-                <!-- TextArea pour écrire un commentaire -->
-                
-                <div class="panel-body">
-                    <form name="commentform" action="./php/send_comments.php" method="post">
-                    <input  type="text" placeholder="pseudo">
-                    <textarea class="form-control" name="commentaire" placeholder="écrire un commentaire..." rows="3"></textarea>
-                    <br>
-                        
-                    <!-- choix image -->
-                  <!--  <div>
-                        <div class="row">
-                             <label for="Image" class="col-xs-2 control-label">Image:</label>
-                            <div class="col-lg-7 col-sm-6 col-12">
-                                <div class="input-group">
-                                    <label class="input-group-btn">
-                                        <span class="btn btn-info">
-                                            Choisir&hellip; <input type="file" id="Image" name="uploadfile" style="display: none;" multiple >
+                                <!-- Commentaire type -->
+                                <li class="media">
+                                    <a href="#" class="pull-left">
+                                        <img src="http://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-circle">
+                                    </a>
+                                    <div class="media-body">
+                                        <span class="text-muted pull-right">
+                                            <small class="text-muted">Il y a 30 min...</small>
                                         </span>
-                                    </label>
-                                    <input type="text" class="form-control" readonly>
-                                </div>
-                            </div>
+                                        <strong class="text-success">Killian Deroche</strong>
+                                        <p>
+                                            Commentaire.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div> -->
-                    
-                    <!-- Poster le commentaire -->
-                    <input type="submit" class="btn btn-info pull-right" value="poster">
-                    <div class="clearfix"></div>
-                    <hr>
-                    </form>
-                    <!-- Liste de commentaire -->
-                    <ul class="media-list">
-                
-                        <!-- Commentaire type -->
-                        
-                        <li class="media">
-                            <a href="#" class="pull-left">
-                                <img src="http://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img-circle">
-                            </a>
-                            <div class="media-body">
-                                <span class="text-muted pull-right">
-                                    <small class="text-muted">Il y a 30 min...</small>
-                                </span>
-                                <strong class="text-success">Killian Deroche</strong>
-                                <p>
-                                    Commentaire.
-                                </p>
-                            </div>
-                        </li>
-                       <!-- Fin commentaire type -->
-                        
-                    </ul>
-                    <!-- Fin liste de commentaire -->
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
-<!------------------- Fin espace COMMENTAIRE ----------------->
-
-
-        
-
     </main>
 
     <footer>
-     
+        <!-- Pied de page -->
+        <?php
+            require("./res/footer.html");
+        ?>
     </footer>
 </body>

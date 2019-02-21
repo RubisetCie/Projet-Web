@@ -1,5 +1,4 @@
 <?php
-
     require_once('phpmailer/PHPMailerAutoload.php');
 
     $mail = new PHPMailer();
@@ -27,6 +26,4 @@
     {
         echo "No";
     }
-
-
 ?>

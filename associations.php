@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/associations.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -45,7 +45,7 @@
                         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
                         if (!isset($GLOBALS["pdo"]))
                         {
-                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+                            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
                         }
 
                         // On récupère les données :
@@ -60,9 +60,9 @@
                                     <div class='card bg-light'>
                                         <img class='card-img-top' src='./res/img/clubs/" . $table["activity_picture"] . "' alt=" . $table["activity_name"] . ">
                                         <div class='card-body'>
-                                            <h5 class='card-title border-bottom pb-3'>" . $table["activity_name"] . "</h5>
+                                            <h5 class='card-title border-bottom pb-3'>" . str_replace("OE", "Œ", $table["activity_name"]) . "</h5>
                                             <p class='card-text'>" . $table["activity_description"] . "</p>
-                                            <a href='./association?ac=". $table["activity_name"] . "' class='btn btn-sm btn-info float-right'>Lire plus</a>
+                                            <a href='./association?ac=" . str_replace(array("à", "â", "é", "è", "ê", "ù", "û", "ô", "ï"), array("a", "a", "e", "e", "e", "u", "u", "o", "i"), $table["activity_name"]) . "' class='btn btn-sm btn-info float-right'>Lire plus</a>
                                         </div>
                                     </div>
                                  </div>";
@@ -81,8 +81,8 @@
 
     <footers>
         <!-- Pied de page -->
-      <?php
-            //require("./res/footer.html");
+        <?php
+            require("./res/footer.html");
         ?>
     </footer>
 </body>

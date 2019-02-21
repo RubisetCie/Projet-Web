@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Nouvel événement</title>
+    <title>Edition événement</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
     
@@ -44,27 +44,27 @@
     </header>
 
     <main>
-        <form name="connectionform" action="./php/scripteditevent.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
+        <form name="connectionform" action="./php/scripteditevent.php" method="post" autocomplete="on">
         <div class="modal-dialog" role="document">
             <div class="modal-content bg-color">
                 <div class="modal-header">
-                    <h5 class="or">Editer une Association</h5>
+                    <h5 class="or">Créer un nouvel événement</h5>
                 </div>
                 <div class="form-group">
-                    <label for="Tire_assoc" class="col-xs-2 control-label">Titre:</label>
+                    <label for="Tire_assoc" class="col-xs-2 control-label">Titre :</label>
                         <div class="col-xs-9">
-                        <input type="text" class="form-control" id="Titre_assoc" name="event_name" placeholder="Ecrire le titre">
+                        <input type="text" class="form-control" id="Titre_assoc" name="name" placeholder="Ecrire le titre">
                         </div>
                 </div>
 
                 <div class="container">
                     <div class="row">
-                         <label for="Image" class="col-xs-1 control-label">Image:</label>
+                         <label for="Image" class="col-xs-1 control-label">Image :</label>
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn btn-orange">
-                                        Choisir&hellip; <input type="file" name="event_picture" id="Image"style="display: none;" multiple >
+                                        Choisir&hellip; <input type="file" name="pic" id="Image"style="display: none;" multiple >
                                     </span>
                                 </label>
                                 <input type="text" class="form-control" readonly>
@@ -73,15 +73,14 @@
                     </div>
                 </div>
 					           
-      
                 <div class="form-group green-border-focus">
-                  <label for="Description" class="col-xs-1 control-label">Description:</label>
-                  <textarea class="form-control" name="event_description" id="Description" rows="2" placeholder="Ecrivez la description de l'association"></textarea>
+                  <label for="Description" class="col-xs-1 control-label">Description :</label>
+                  <textarea class="form-control" name="desc" id="Description" rows="2" placeholder="Ecrivez la description de l'association"></textarea>
                 </div>
 
 
             <div>
-                <label for="Description" class="col-xs-2 control-label">Prix:</label>
+                <label for="Description" class="col-xs-2 control-label">Prix :</label>
                 	<!-- Bouton Radio Gratuit -->
 				<div class="form-check form-check-inline">
 				  <input type="radio" class="form-check-input" id="radio_Gratuit" name="radio_prix">
@@ -97,24 +96,24 @@
             </div>
                 
                 <div>
-                    <label for="Description" class="col-xs-2 control-label">Quand:</label>
+                    <label for="Description" class="col-xs-2 control-label">Date :</label>
                 	<!-- Bouton Radio Récurent -->
 				<div class="form-check form-check-inline">
 				  <input type="radio" class="form-check-input" id="radio_recurent" name="radio_when">
-				  <label class="form-check-label" for="radio_recurent">Récurent</label>
+				  <label class="form-check-label" for="radio_recurent">Récurrent</label>
 				</div>
 
 				<!-- Bouton Radio Ponctuelle -->
 				<div class="form-check form-check-inline">
 				  <input type="radio" class="form-check-input" id="radio_ponctuelle" name="radio_when">
-				  <label class="form-check-label" for="radio_ponctuelle">Ponctuelle</label>
+				  <label class="form-check-label" for="radio_ponctuelle">Ponctuel</label>
 				</div>
 
             </div>
                 
                
             <div>
-                    <label for="Description" class="col-xs-1 control-label">Date:</label>
+                    <label for="Description" class="col-xs-1 control-label">Date :</label>
                 <div class="row">
                     <div class='col-sm-6'>
                         <div class="form-group">
@@ -134,17 +133,21 @@
                 
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success" onclick='window.location.replace(\"./php/scripteditevent.php\")'>Soumettre</button>
+                    <button type="submit" class="btn btn-success" onclick="window.location.replace('./php/scripteditevent.php\')">Soumettre</button>
                 </div>
                      
 
             </div>
         </div>
     
- </form>
+        </form>
 
     </main>
     
     <footer class="container-fluid footer">
+        <!-- Pied de page -->
+        <?php
+            require("./res/footer.html");
+        ?>
     </footer>
 </body>

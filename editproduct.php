@@ -2,7 +2,7 @@
 <!-- Informations d'en-tête -->
 
 <head>
-    <title>Edition d'un produit</title>
+    <title>Edition produit</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -35,16 +35,10 @@
     </header>
 
     <main>
-
-        <!-- -->
-
         <div class="container">
-
-
-
             <h1>Edition du Produit</h1>
             <hr>
-<form name="connectionform" action="./php/scripteditproduct.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
+            <form name="connectionform" action="./php/scripteditproduct.php" method="post" onsubmit="return validateConnection()" autocomplete="on">
                 <div class="row">
                     
                     <!-- Colonne de gauche -->
@@ -52,8 +46,7 @@
                         <div class="text-center">
                             <img src="//placehold.it/100" class="avatar img-circle" alt="avatar"> <!-- le src de cette photo se trouve directement sur internet-->
                             <h6>Télécharger une photo...</h6>
-
-                            <input type="file" class="form-control" name="product_picture">
+                            <input type="file" class="form-control" name="pic">
                         </div>
                     </div>
 
@@ -65,25 +58,25 @@
                                 <label class="col-lg-3 control-label" style="padding-bottom: 10px;">Nom :</label>
                                 <div class="col-lg-8" style="padding-left: 0px;">
                                     <!--col-lg-8 permet de definir la longueur de la bar de l'input, ici la longueur est de 8-->
-                                    <input class="form-control" type="text" name="product_name">
+                                    <input class="form-control" type="text" name="name">
                                 </div>
                             </div>
                             <div class="form-group" style="padding-bottom: 100px; padding-top: 10px;">
                                 <label class="col-lg-2 control-label"  style=" padding-top:20px;">Catégorie :</label>
                                 <div class="col-lg-8" style="padding-left: 70px; padding-top:20px;">
-                                    <input class="form-control" type="text" name="product_type">
+                                    <input class="form-control" type="text" name="type">
                                 </div>
                             </div>
                             <div class="form-group" style="padding-bottom: 50px;">
                                 <label class="col-md-3 control-label">Prix(€) :</label>
                                 <div class="col-md-2" >
-                                    <input class="form-control" type="text" name="product_price" >
+                                    <input class="form-control" type="text" name="price" >
                                 </div>
                             </div>
                             <div class="form-group" >
                                 <label class="col-lg-3 control-label">Description :</label>
                                 <div class="col-lg-6">
-                                    <input class="input_description" type="text" style="width: 600px; height: 120px;" name="product_description">
+                                    <input class="input_description" type="text" style="width: 600px; height: 120px;" name="desc">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -97,8 +90,6 @@
                 </div>
             </form>
         </div>
-
-        <!--  -->
     </main>
 
     <footer class="container-fluid footer">

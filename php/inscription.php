@@ -10,7 +10,7 @@
         // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
         if (!isset($GLOBALS["pdo"]))
         {
-            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=10.192.128.186", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         }
 
         // On vérifie que l'utilisateur n'existe pas déjà :
@@ -40,5 +40,5 @@
         echo $e->getMessage();
     }
     
-    header("Location: ../index.php");
+    header("Location: ../index");
 ?>

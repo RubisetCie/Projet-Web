@@ -1,7 +1,30 @@
 <!DOCTYPE html>
+<?php
+    try
+    {
+        // On établi la connexion à la base de donnée si ce n'est pas déjà fait :
+        if (!isset($GLOBALS["pdo"]))
+        {
+            $GLOBALS["pdo"] = new PDO("mysql:dbname=cesiprojet;host=localhost", "cesibde", "ps854ccbjrkocij2", array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+        }
+        
+        // On récupère les données :
+        $query = $GLOBALS["pdo"]->prepare("SELECT * FROM products WHERE product_id = :id");
+        $query->bindValue(":id", filter_input(INPUT_GET, "id", FILTER_SANITIZE_URL), PDO::PARAM_INT);
+        $query->execute();
+        
+        // On récupère les informations sur l'association :
+        $table = $query->fetch(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e)
+    {
+        echo $e->getMessage();
+    }
+?>
+
 <!-- Informations d'en-tête -->
 <head>
-    <title>Description d'article</title>
+    <title><?php echo $table["product_name"]; ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
 
@@ -13,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="./style/css/base.css">
     <link rel="stylesheet" type="text/css" href="./style/css/footer.css">
     <link rel="stylesheet" type="text/css" href="./style/css/article.css">
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <script src="./vendors/jquery-3.3.1.min.js"></script>
     <script src="./vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -22,8 +45,6 @@
 
     <!-- Balises META -->
     <meta charset="utf-8">
-    <meta name="description" content="Descritpion de la page">
-    <meta name="keywords" content="CESI,BDE">
     <meta name="author" content="Matthieu CARTERON">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -39,7 +60,7 @@
     <main>
         <article>
             <header>
-                <h1 class="titre">Pull CESI</h1>
+                <h1 class="titre"><?php echo $table["product_name"]; ?></h1>
                 <br />
                 <br />
                 <h2 class="ei">Ei Cesi</h2>
@@ -47,44 +68,24 @@
                 <br />
                 <br />
                 <br />
-                <img class="logo" src="./res/img/logo_cesi.png" alt="Product" />
+                <img class="logo" src="./res/img/logo_cesi.png" alt="Product"/>
                 <br />
                 <br />
             </header>
 
             <section id="image-gallery">
                 <figure>
-                    <figcaption class="legende">Pull Cesi en coton de face</figcaption>
+                    <figcaption class="legende"><?php echo $table["product_description"]; ?></figcaption>
                 </figure>
 
                 <div id="thumbnails">
-                    <img class="pull" src="./res/img/products/product_pull2.jpg" alt="Produit 1" />
+                    <img class="pull" src="./res/img/products/<?php echo $table["product_picture"]; ?>" alt="Produit image" />
                     <br />
                     <br />
-                    <div class="price">300&euro;</div>
+                    <div class="price"><?php echo $table["product_price"]; ?> &euro;</div>
                     <br />
                     <div class="promo"></div>
                 </div>
-            </section>
-
-            <section id="info">
-                <br />
-                <br />
-                <p class="des">Matière: 50% Coton / 50% Polyester Poids: 175g/m² Col tricot Ourlet bas de manches et base Patte boutonnée: 3 boutons Tissu teint Bande de propreté dans le col.</p>
-                <div class="social">
-                    <!-- Boutons de partage-->
-                </div>
-            </section>
-            <section id="options">
-                <select class="op">
-                    <option>XS</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <a href="#" id="addtocart">Ajouter au panier</a>
             </section>
 
             <section id="characteristics">
@@ -92,12 +93,7 @@
                 <h2 class="cara1">Stock</h2>
 
                 <ul class="stock">
-                    <h6>XS O en stock</h6>
-                    <h6>S 4 en stock</h6>
-                    <h6>M 7 en stock</h6>
-                    <h6>L 5 en stock</h6>
-                    <h6>XL 4 en stock</h6>
-                    <h6>XXL O en stock</h6>
+                    <h6><?php echo $table["product_stock"]; ?></h6>
                 </ul>
 
             </section>
